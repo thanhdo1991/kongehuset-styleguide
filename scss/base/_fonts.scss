@@ -1,0 +1,105 @@
+// FONTS
+// Import all webfonts here
+//https://gist.github.com/jonathantneal/d0460e5c2d5d7f9bc5e6
+
+@font-face {
+  font-family: 'kong';
+  src: url('../fonts/kong.eot');
+  src: url('../fonts/kong.eot') format('embedded-opentype'),
+    url('../fonts/kong.ttf') format('truetype'),
+    url('../fonts/kong.woff') format('woff'),
+    url('../fonts/kong.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: 'kong';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+  // Better Font Rendering ===========
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icons-icomon {
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: 'kong' !important;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+
+  // Better Font Rendering ===========
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'jeles_regularregular';
+  src: url('../fonts/jeles_regular.eot');
+  src: url('../fonts/jeles_regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/jeles_regular.woff2') format('woff2'),
+       url('../fonts/jeles_regular.woff') format('woff'),
+       url('../fonts/jeles_regular.ttf') format('truetype'),
+       url('../fonts/jeles_regular.svg#jeles_regularregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gotham_book';
+  src: url('../fonts/gotham-book.eot');
+  src: url('../fonts/gotham-book.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gotham-book.woff2') format('woff2'),
+       url('../fonts/gotham-book.woff') format('woff'),
+       url('../fonts/gotham-book.ttf') format('truetype'),
+       url('../fonts/gotham-book.svg#gotham_bookregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dinpro_condmedium';
+  src: url('../fonts/Dinpro_condmedium.eot');
+  src: url('../fonts/Dinpro_condmedium.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Dinpro_condmedium.woff2') format('woff2'),
+       url('../fonts/Dinpro_condmedium.woff') format('woff'),
+       url('../fonts/Dinpro_condmedium.ttf') format('truetype'),
+       url('../fonts/Dinpro_condmedium.svg#Dinpro_condmedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gotham';
+  src: url('../fonts/gotham.eot');
+  src: url('../fonts/gotham.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gotham.woff2') format('woff2'),
+       url('../fonts/gotham.woff') format('woff'),
+       url('../fonts/gotham.ttf') format('truetype'),
+       url('../fonts/gotham.svg#gotham_boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JelesBold';
+  src: url('../fonts/JelesBold.eot');
+  src: url('../fonts/JelesBold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/JelesBold.woff2') format('woff2'),
+       url('../fonts/JelesBold.woff') format('woff'),
+       url('../fonts/JelesBold.ttf') format('truetype'),
+       url('../fonts/JelesBold.svg#gotham_boldregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

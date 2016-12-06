@@ -1,0 +1,16 @@
+
+.header__left,
+.header__center,
+.header__right {
+  float: left;
+  width: 33.33%;
+}
+
+.header__bottom:before,
+.header__bottom:after,
+.header__top:after,
+.header__top:before {
+  content: '';
+  display: table;
+  clear: both;
+}

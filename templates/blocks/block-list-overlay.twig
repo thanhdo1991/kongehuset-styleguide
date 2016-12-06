@@ -1,0 +1,34 @@
+{% set gridImage =[
+  {
+    'image' : 'box-image.jpg',
+    'title' : 'Quisque volutpat mattis eros. Nullam malesuada erat ut turpis',
+    'photo'  : 'Kongehuset',
+  }
+]
+%}
+{% include "block-box-overlay.twig" with { gridImage} %}
+
+{% set classmodifier  = 'box-img-overlay__align-top' %}
+{% set gridImage =[
+  {
+    'image' : 'box-image.jpg',
+    'photo'  : 'Kongehuset',
+  }
+]
+%}
+{% include "block-box-overlay.twig" with { classmodifier, gridImage} %}
+
+{% set classmodifier  = 'two-cols' %}
+{% set gridImage = [
+  {
+    'positon' : 'box-overlay__position',
+    'image' : 'box-image.jpg',
+    'photo'  : 'Kongehuset',
+  },
+  {
+    'image' : 'image-overlay2.jpg',
+    'photo'  : 'Kongehuset',
+  }
+]
+%}
+{% include "block-box-overlay.twig" with { classmodifier, gridImage} %}

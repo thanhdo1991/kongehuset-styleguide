@@ -1,0 +1,135 @@
+// Box list media.
+.box-list-media {
+  &__item {
+    display: inline-block;
+    width: 100%;
+  }
+
+  &__wrap {
+    display: inline-block;
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+
+    @include susy-media(mobileLandscape) {
+      float: left;
+      margin-bottom: rem(10px);
+    }
+
+    .field-content {
+      > a {
+        background: $redlight none repeat scroll 0 0;
+        bottom: 0;
+        display: inline-block;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        right: 10px;
+        text-indent: -999rem;
+        top: 0;
+      }
+    }
+  }
+
+  &__image {
+    img {
+      @include susy-media(mobileLandscape) {
+        margin-right: rem(10px);
+      }
+    }
+  }
+
+  &__content {
+    @include susy-media(mobileLandscape) {
+      margin-bottom: rem(10px);
+      overflow: hidden;
+    }
+  }
+
+  &__title {
+    @include gotham-book;
+    font-size: 1.05rem;
+    line-height: rem(22px);
+    margin: 0;
+    overflow: hidden;
+    padding-top: rem(5px);
+    text-align: left;
+
+    a {
+      color: $gray-66;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  &__lager-title {
+    @include dinpro-condmedium;
+    font-size: 1.3rem;
+    letter-spacing: rem(1px);
+    line-height: rem(22px);
+    margin-bottom: rem(5px);
+    text-align: left;
+    text-transform: uppercase;
+
+    a {
+      color: $gray-55;
+      font-size: 1.3rem;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  // Modifier grid.
+  &--grid {
+    .box-list-media {
+      &__image {
+        float: left;
+        line-height: 0;
+        margin-bottom: rem(10px);
+
+        img {
+          margin-right: rem(10px);
+        }
+      }
+
+      &__item {
+        margin-bottom: rem(25px);
+        min-height: rem(100px);
+
+        @include susy-media(mobileLandscape) {
+          @include gallery(4 of $susy-tablet) ;
+          padding: rem(0 15px);
+        }
+
+        @include susy-media(tablet-landscape) {
+          @include gallery(4 of $susy-desktop);
+        }
+      }
+
+      &__title {
+        color: $gray-66;
+        padding-top: 0;
+
+        p {
+          @include gotham-book;
+          color: $gray-66;
+          font-size: 1.05rem;
+          line-height: rem(22px);
+          margin: 0;
+          padding-top: rem(5px);
+          text-align: left;
+        }
+      }
+
+      &__content {
+        @include susy-media(mobileLandscape) {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# Ignore CSS files (will be rendered directly on reinstall)
+*.css
+
+# Ignore HTML files (will be rendered directly on reinstall)
+*.html
+
+# Ignore sass cache
+.npm/.sass-cache/
+.npm/node_modules
+.npm/bower_components/
+
+# Ignore SASS source maps
+*.css.map
+
+# Ignore IntelliJ folder
+.idea/
+
+# Ignore mac tmp
+.DS_Store

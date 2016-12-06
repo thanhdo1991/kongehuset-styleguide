@@ -1,0 +1,148 @@
+.box-user {
+  &__item {
+    margin-bottom: rem(20px);
+    text-align: center;
+
+    @include susy-media(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__picture {
+    line-height: 0;
+    margin-bottom: rem(10px);
+
+    img {
+      border-radius: 50%;
+      border: rem(2px) solid $white;
+      height: rem(120px);
+      transition: .5s;
+      width: rem(120px);
+    }
+
+    a {
+      display: inline-block;
+      transition: .5s;
+
+      &:hover {
+        opacity: 1;
+        transition: .5s;
+
+        img {
+          border: 0;
+          transition: .5s;
+        }
+      }
+    }
+  }
+
+  &__name {
+    @include susy-media(tablet) {
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    h4 {
+      @include jeles-regularregular;
+      color: $gray-66;
+      line-height: rem(31px);
+      margin: 0;
+    }
+  }
+
+  &__date {
+    @include dinpro-condmedium;
+    color: $primary;
+    font-size: rem(15px);
+    line-height: rem(20px);
+    padding-bottom: rem(20px);
+    text-transform: uppercase;
+  }
+
+  &__content {
+    @extend %clearfix;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 91.67%;
+
+    @include susy-media(tablet) {
+      padding-top: rem(20px);
+    }
+
+    &:before {
+      @include susy-media(tablet) {
+        background: $orange-1;
+        bottom: rem(140px);
+        content: '';
+        display: inline-block;
+        height: 100%;
+        left: 50%;
+        position: absolute;
+        top: auto;
+        width: rem(2px);
+      }
+    }
+
+    .box-user__item {
+      @include susy-media(tablet) {
+        @include gallery(6 of $susy-desktop);
+        width: 50%;
+
+        .box-user__picture {
+          position: relative;
+
+          &:before {
+            border-top: rem(1px) solid $orange-1;
+            content: '';
+            margin-top: rem(-10px);
+            position: absolute;
+            right: rem(-3px);
+            top: rem(61px);
+            width: 50%;
+            z-index: -1;
+          }
+
+          &:after {
+            background: $orange-1;
+            border-radius: 100%;
+            content: '';
+            height: rem(20px);
+            position: absolute;
+            right: rem(-11px);
+            top: rem(41px);
+            width: rem(20px);
+          }
+        }
+
+        &:nth-child(2n) {
+          margin-top: rem(20px);
+
+          .box-user__picture {
+            &:before {
+              left: rem(-3px);
+              right: auto;
+            }
+
+            &:after {
+              right: auto;
+              left: rem(-13px);
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          margin-top: rem(108px);
+        }
+
+        &:nth-child(2n + 1) {
+          margin-top: rem(-88px);
+        }
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

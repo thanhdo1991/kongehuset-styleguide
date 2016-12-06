@@ -1,0 +1,88 @@
+.box-slide-gallery {
+ @include susy-media(tabletOnlyDesktop) {
+  padding: rem(0 40px);
+ }
+
+  @include susy-media(tablet-landscape) {
+    padding: rem(0 80px);
+  }
+
+  &__item {
+    max-height: rem(600px);
+    padding: rem(0 5px);
+    text-align: center;
+  }
+
+  &__term {
+    @include dinpro-condmedium;
+    color: $orange-2;
+    font-size: rem(14px);
+    letter-spacing: rem(.5px);
+    line-height: rem(20px);
+    padding-bottom: rem(10px);
+    padding-top: rem(19px);
+    text-transform: uppercase;
+  }
+
+  &__image {
+    line-height: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include gotham_book;
+    color: $gray-55;
+    font-size: 1.1rem;
+    line-height: rem(22px);
+
+    a {
+      @include gotham_book;
+      color: $gray-55;
+      font-size: 1.1rem;
+      line-height: rem(22px);
+
+      &:hover {
+        color: $gray-99;
+      }
+    }
+  }
+
+  .slick-next,
+  .slick-prev {
+    bottom: inherit;
+    margin-top: rem(-37px);
+    top: 50%;
+    transform: translate(0%, 0%);
+  }
+
+  .slick-next {
+    @include susy-media(tabletOnlyDesktop) {
+      right: -10px;
+      right: rem(-55px);
+    }
+
+    &:before {
+      bottom: rem(17px);
+      right: rem(7px);
+    }
+
+    &:after {
+      bottom: rem(26px);
+      right: rem(7px);
+    }
+  }
+
+  .slick-prev {
+    @include susy-media(tabletOnlyDesktop) {
+      left: -15px;
+      left: rem(-55px);
+    }
+  }
+
+  .slick-dots {
+    margin-top: rem(20px);
+  }
+}

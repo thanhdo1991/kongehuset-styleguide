@@ -1,0 +1,48 @@
+
+core = 7.x
+name = Kong Phase 2
+description = Theme for Kong
+screenshot = screenshot.png
+
+; Adding style sheets
+; Add a style sheet for all media
+stylesheets[screen][] = css/lib/jquery.mCustomScrollbar.min.css
+stylesheets[all][] = css/styles.css
+; Add style sheet for print media
+stylesheets[print][] = css/print.css
+
+; Scripts
+;scripts[] = js/jquery-ui.js
+scripts[] = js/lib/bootstrap.min.js
+scripts[] = js/lib/bootstrap-select.js
+;scripts[] = js/lib/enquire.min.js
+scripts[] = js/lib/jquery.mCustomScrollbar.concat.min.js
+scripts[] = js/lib/slick.min.js
+scripts[] = js/lib/masonry.pkgd.js
+scripts[] = js/lib/jquery.transform2d.js
+scripts[] = js/scripts.js
+
+; Global theme settings
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = comment_user_verification
+
+; Regions
+regions[page_top] = Page Top
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[help] = Help
+regions[content] = Content
+regions[sidebar_first] = Sidebar First
+regions[sidebar_second] = Sidebar Second
+regions[footer] = Footer
+regions[page_bottom] = Page Bottom
+
+; Add layout
+plugins[panels][layouts] = plugins/layouts

@@ -1,0 +1,747 @@
+// Royalline block.
+$mobile-royal: 767px;
+$tablet-up: 768px;
+$tablet-small-royal: 900px;
+$tablet-royal: 1024px;
+
+.royalline {
+  font-family: $serif;
+  list-style: none;
+  text-align: center;
+  overflow: hidden;
+
+  &__headline {
+    color: $blue;
+    font-family: $sans;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 50px;
+    text-transform: uppercase;
+  }
+
+  &__monarch-list {
+    list-style: none;
+    margin-top: 80px;
+    margin-left: 0;
+  }
+
+  &__monarch {
+    animation-duration: $slow;
+    -moz-animation-duration: $slow;
+    -webkit-animation-duration: $slow;
+    animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+    cursor: pointer;
+    margin-bottom: 40px;
+    position: relative;
+    transition: all $slow ease;
+
+    .js & {
+      @media only screen and (min-width: $tablet-royal) {
+        opacity: 0;
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+      }
+    }
+    &__end-year {
+      background-color: white;
+      color: $brown;
+      display: block;
+      font-family: $sans;
+      font-size: 25px;
+      font-weight: 400;
+      left: 50%;
+      line-height: 28px;
+      margin-left: -35px;
+      padding: 3px 5px 1px 5px;
+      position: absolute;
+      text-align: center;
+      top: -35px;
+      //width: 70px;
+
+      @media only screen and (max-width: $mobile-royal) {
+        font-size: 20px;
+        left: 60px;
+      }
+    }
+
+    &__content {
+      margin: 0 auto;
+      max-height: 120px;
+      max-width: 1060px;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 100px;
+      position: relative;
+      text-align: left;
+      transition: all $slow ease;
+      -webkit-transition: all $slow ease;
+      -moz-transition: all $slow ease;
+
+      @media only screen and (max-width: $tablet-small-royal) {
+        max-height: 100px;
+        min-height: 100px;
+        padding-top: 80px;
+      }
+
+      @media only screen and (max-width: $mobile-royal) {
+        height: 90px;
+        overflow: hidden;
+        padding-bottom: 0;
+        padding-top: 25px;
+      }
+
+      &:before {
+        border: 1px solid $brown;
+        border-left: 2px solid $brown;
+        content: '';
+        height: 159px;
+        left: 50%;
+        position: absolute;
+        top: -20px;
+        transition-delay: 400ms;
+        -moz-transition-delay: 400ms;
+        -webkit-transition-delay: 400ms;
+        transition: opacity 400ms ease;
+        -moz-transition: opacity 400ms ease;
+        -webkit-transition: opacity 400ms ease;
+        width: 162px;
+        z-index: -1;
+
+        @media only screen and (max-width: $tablet-small-royal) {
+          height: 139px;
+          width: 139px;
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          background-color: $brown;
+          border: none !important;
+          left: 60px;
+          position: absolute;
+          transition: none;
+          -webkit-transition: none;
+          -moz-transition: none;
+          width: 2px;
+        }
+
+        .royalline__monarch:nth-child(odd) & {
+          border-left: 1px solid $brown;
+          border-right: 2px solid $brown;
+          margin-left: -160px;
+
+          @media only screen and (max-width: $tablet-small-royal) {
+            margin-left: -140px;
+          }
+
+          @media only screen and (max-width: $mobile-royal) {
+            margin-left: 0;
+          }
+        }
+
+        .royalline__monarch:first-child & {
+          border-right: none;
+          border-top: none;
+          height: 80px;
+          top: 60px;
+
+          @media only screen and (max-width: $tablet-small-royal) {
+            height: 60px;
+          }
+        }
+
+        .royalline__monarch:last-child & {
+          border-bottom: none;
+          height: 80px;
+        }
+
+        .royalline__monarch:last-child:nth-child(odd) & {
+          border-right: none;
+        }
+
+        .royalline__monarch:last-child:nth-child(even) & {
+          border-left: none;
+        }
+
+        .royalline__monarch--expand & {
+          opacity: 0;
+          -moz-opacity: 0;
+          -webkit-opacity: 0;
+          transition-delay: 0;
+          -moz-transition-delay: 0;
+          -webkit-transition-delay: 0;
+          transition: opacity 400ms ease;
+          -moz-transition: opacity 400ms ease;
+          -webkit-transition: opacity 400ms ease;
+        }
+      }
+
+      .royalline__monarch--expand & {
+        height: auto;
+        max-height: 600px;
+        padding-bottom: 20px;
+        padding-top: 100px;
+
+        @media only screen and (max-width: $tablet-royal) {
+          min-height: 400px;
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          max-height: 400px;
+          min-height: 200px;
+          padding-top: 40px;
+        }
+      }
+
+      .royalline__monarch--show-content & {
+        max-height: 800px;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 13px;
+      background-color: $blue;
+      color: white;
+      z-index: 50;
+      cursor: pointer;
+      opacity: 0;
+      -moz-opacity: 0;
+      -webkit-opacity: 0;
+      visibility: hidden;
+      transition: all $slow ease;
+      -moz-transition: all $slow ease;
+      -webkit-transition: all $slow ease;
+      font-size: 0;
+
+
+      &:before {
+        font-size: 24px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media only screen and (max-width: $mobile-royal) {
+        display: none;
+      }
+
+      span {
+        display: flex;
+        font-size: 0;
+        vertical-align: -3px;
+
+        &:before {
+          font-size: 25px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &:hover {
+        background-color: $brown;
+      }
+
+      .royalline__monarch--show-content & {
+        visibility: visible;
+        opacity: 1;
+        -moz-opacity: 1;
+        -webkit-opacity: 1;
+      }
+    }
+
+    &__toggle {
+      display: none;
+
+      @media only screen and (max-width: $mobile-royal) {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 16px;
+        color: $grey;
+        transition: top $slow ease;
+        -moz-transition: top $slow ease;
+        -webkit-transition: top $slow ease;
+        z-index: 50;
+
+        &__close {
+          display: none;
+          font-size: 0;
+
+          &:before {
+            font-size: 24px;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .royalline__monarch--expand & {
+          top: 30px;
+
+          &__close {
+            display: inline;
+            font-size: 0;
+
+            &:before {
+              font-size: 24px;
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+          &__expand {
+            display: none;
+          }
+        }
+      }
+
+      &__expand {
+        display: inline-block;
+        font-size: 18px;
+        transform: rotate(45deg);
+        -sand-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        position: relative;
+        left: 5px;
+      }
+    }
+
+    &__image {
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      border-radius: 50%;
+      bottom: 0;
+      left: 50%;
+      margin-left: 100px;
+      position: absolute;
+      top: 0;
+      transition: all $slow ease;
+      -moz-transition: all $slow ease;
+      -webkit-transition: all $slow ease;
+      width: 120px;
+      z-index: 10;
+
+      @media only screen and (max-width: $tablet-small-royal) {
+        margin-left: 90px;
+        width: 100px;
+      }
+
+      @media only screen and (max-width: $mobile-royal) {
+        bottom: auto;
+        height: 80px;
+        left: 20px;
+        margin: 0;
+        top: 10px;
+        width: 80px;
+      }
+
+      &--center {
+        background-position: center center;
+      }
+
+      &__credit {
+        background-color: white;
+        bottom: 20px;
+        color: $gray-99;
+        display: inline-block;
+        font-family: $sans;
+        font-size: 14px;
+        left: 20px;
+        letter-spacing: 1px;
+        line-height: 18px;
+        max-width: calc(100% - 40px);
+        opacity: 0;
+        padding: 10px 10px 8px 10px;
+        position: absolute;
+        text-transform: uppercase;
+        transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -webkit-transition: all 300ms ease;
+        visibility: hidden;
+      }
+
+      .royalline__monarch:nth-child(odd) & {
+        margin-left: -220px;
+
+        @media only screen and (max-width: $tablet-small-royal) {
+          margin-left: -190px;
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          margin-left: 0;
+        }
+      }
+
+      .royalline__monarch:hover & {
+        @media only screen and (min-width: $tablet-royal) {
+          transform: scale(1.15);
+          -moz-transform: scale(1.15);
+          -webkit-transform: scale(1.15);
+        }
+      }
+
+      .royalline__monarch--expand & {
+        @media only screen and (min-width: $tablet-up) {
+          border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          bottom: 20px;
+          margin-left: 0;
+          top: 20px;
+          transform: none !important;
+          -moz-transform: none !important;
+          -webkit-transform: none !important;
+          width: calc(50% - 20px);
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          top: 20px;
+        }
+
+        &:hover {
+          .royalline__monarch__image__credit {
+            @media only screen and (min-width: $tablet-up) {
+              opacity: 1;
+              -moz-opacity: 1;
+              -webkit-opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+
+      .royalline__monarch--expand:nth-child(odd) & {
+        @media only screen and (min-width: $tablet-up) {
+          margin-left: 0;
+        }
+      }
+
+      .royalline__monarch--expand:nth-child(even) & {
+        @media only screen and (min-width: $tablet-up) {
+          left: 20px;
+        }
+      }
+    }
+
+    &__name {
+      @include jeles-regularregular;
+      color: $grey;
+      font-size: 18px;
+      font-weight: 400;
+      left: 50%;
+      line-height: 24px;
+      margin-bottom: 0;
+      margin-left: 240px;
+      margin-top: 0;
+      position: absolute;
+      top: 60px;
+      transform: translate3d(0, -100%, 0);
+      -moz-transform: translate3d(0, -100%, 0);
+      -webkit-transform: translate3d(0, -100%, 0);
+      transition: all $slow ease;
+      -moz-transition: all $slow ease;
+      -webkit-transition: all $slow ease;
+
+      @media only screen and (max-width: $tablet-small-royal) {
+        font-size: 14px;
+        line-height: 18px;
+        margin-left: 200px;
+        top: 50px;
+      }
+
+      @media only screen and (max-width: $mobile-royal) {
+        bottom: auto;
+        left: auto;
+        margin-left: 90px;
+        padding-right: 40px;
+        position: relative;
+        top: auto;
+        transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        transition: none;
+        -moz-transition: none;
+        -webkit-transition: none;
+      }
+
+      .royalline__monarch:nth-child(even):hover & {
+        transform: translate3d(10px, -100%, 0);
+        -moz-transform: translate3d(10px, -100%, 0);
+        -webkit-transform: translate3d(10px, -100%, 0);
+
+        @media only screen and (max-width: $mobile-royal) {
+          transform: none;
+          -moz-transform: none;
+          -webkit-transform: none;
+        }
+      }
+
+      .royalline__monarch:nth-child(odd) & {
+        margin-left: -240px;
+        transform: translate3d(-100%, -100%, 0);
+        -moz-transform: translate3d(-100%, -100%, 0);
+        -webkit-transform: translate3d(-100%, -100%, 0);
+
+        @media only screen and (max-width: $tablet-small-royal) {
+          margin-left: -200px;
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          margin-left: 90px;
+          transform: none;
+          -moz-transform: none;
+          -webkit-transform: none;
+        }
+      }
+
+      .royalline__monarch:nth-child(odd):hover & {
+        @media only screen and (min-width: $tablet-up) {
+          padding-right: 10px;
+        }
+      }
+
+      .royalline__monarch--expand & {
+        @media only screen and (min-width: $tablet-up) {
+          margin-left: 40px;
+          top: 60px;
+          transform: none !important;
+          -moz-transform: none !important;
+          -webkit-transform: none !important;
+
+          @media only screen and (max-width: $tablet-small-royal) {
+            margin-left: 20px;
+            top: 40px;
+          }
+        }
+      }
+
+      .royalline__monarch--expand:nth-child(odd) & {
+        @media only screen and (min-width: $tablet-up) {
+          left: 20px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__period {
+      @include dinpro-condmedium;
+      color: $brown;
+      font-size: 20px;
+      font-weight: 400;
+      left: 50%;
+      line-height: 24px;
+      margin-left: 240px;
+      position: absolute;
+      top: 65px;
+      transition: all $slow ease;
+      -moz-transition: all $slow ease;
+      -webkit-transition: all $slow ease;
+
+      @media only screen and (max-width: $tablet-small-royal) {
+        font-size: 17px;
+        margin-left: 200px;
+        top: 54px;
+      }
+
+      @media only screen and (max-width: $mobile-royal) {
+        bottom: auto;
+        left: auto;
+        margin-left: 90px;
+        padding-right: 20px;
+        position: relative;
+        top: auto;
+        transition: none;
+      }
+
+      .royalline__monarch:nth-child(odd) & {
+        margin-left: -240px;
+        transform: translate3d(-100%, 0, 0);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        -moz-transform: translate3d(-100%, 0, 0);
+
+        @media only screen and (max-width: $tablet-small-royal) {
+          margin-left: -200px;
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          margin-left: 90px;
+          transform: none;
+          -webkit-transform: none;
+          -moz-transform: none;
+        }
+      }
+
+      .royalline__monarch:nth-child(even):hover & {
+        transform: translate3d(10px, 0, 0);
+        -moz-transform: translate3d(10px, 0, 0);
+        -webkit-transform: translate3d(10px, 0, 0);
+      }
+
+      .royalline__monarch:nth-child(odd):hover & {
+        padding-right: 10px;
+      }
+
+      .royalline__monarch--expand:nth-child(even) & {
+        @media only screen and (min-width: $tablet-up) {
+          margin-left: 40px;
+          top: 90px;
+          transform: none !important;
+          -moz-transform: none !important;
+          -webkit-transform: none !important;
+
+          @media only screen and (max-width: $tablet-small-royal) {
+            margin-left: 20px;
+            top: 70px;
+          }
+        }
+      }
+
+      .royalline__monarch--expand:nth-child(odd) & {
+        @media only screen and (min-width: $tablet-up) {
+          left: 20px;
+          margin-left: 0;
+          top: 90px;
+          transform: none !important;
+          -moz-transform: none !important;
+          -webkit-transform: none !important;
+
+          @media only screen and (max-width: $tablet-small-royal) {
+            top: 70px;
+          }
+        }
+      }
+    }
+
+    &__description {
+      color: $grey;
+      font-family: 'Gotham Book', sans-serif;
+      font-size: 15px;
+      line-height: 24px;
+      min-height: 400px;
+      opacity: 0;
+      -moz-opacity: 0;
+      -webkit-opacity: 0;
+      padding: 40px 40px 40px 0;
+      transform: translate3d(0, 50px, 0);
+      -moz-transform: translate3d(0, 50px, 0);
+      -webkit-transform: translate3d(0, 50px, 0);
+      transition: all $slow ease;
+      -moz-transition: all $slow ease;
+      -webkit-transition: all $slow ease;
+      visibility: hidden;
+      width: 50%;
+
+      @media only screen and (max-width: $tablet-small-royal) {
+        font-size: 13px;
+        line-height: 20px;
+        min-height: 300px;
+        padding: 10px 20px 10px 0;
+      }
+
+      @media only screen and (max-width: $mobile-royal) {
+        padding-bottom: 0;
+        padding-right: 0;
+        padding-top: 30px;
+        width: 100%;
+      }
+
+      a {
+        @include dinpro-condmedium;
+        @extend .icon-arrow-right;
+        color: $brown;
+        text-decoration: none;
+        font-size: 1.2rem;
+        line-height: 26px;
+        font-weight: 400;
+        margin-top: 20px;
+        display: inline-block;
+        text-transform: uppercase;
+        transition: transform 500ms ease;
+        -moz-transition: transform 500ms ease;
+        -webkit-transition: transform 500ms ease;
+
+        @media only screen and (max-width: $mobile-royal) {
+          font-size: 15px;
+          line-height: 20px;
+        }
+
+        .icon {
+          font-size: 12px;
+          vertical-align: 1px;
+          margin-right: 5px;
+
+          @media only screen and (max-width: $mobile-royal) {
+            font-size: 10px;
+          }
+        }
+
+        &:hover {
+          transform: translate3d(12px, 0, 0);
+          -moz-transform: translate3d(12px, 0, 0);
+          -webkit-transform: translate3d(12px, 0, 0);
+        }
+
+        &:before {
+          @extend %icomoon;
+          padding-right: 5px;
+          position: relative;
+          top: 2px;
+        }
+      }
+
+      .royalline__monarch:nth-child(even) & {
+        padding-left: calc(50% + 40px);
+        width: 100%;
+
+        @media only screen and (max-width: $tablet-small-royal) {
+          padding-left: calc(50% + 20px);
+        }
+
+        @media only screen and (max-width: $mobile-royal) {
+          padding-left: 0;
+        }
+      }
+
+      .royalline__monarch--show-content & {
+        opacity: 1;
+        -moz-opacity: 1;
+        -webkit-opacity: 1;
+        transform: none;
+        -moz-transform: none;
+        -webkit-transform: none;
+        visibility: visible;
+      }
+    }
+
+    &--expand {
+      background-color: $light-blue;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+      -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+      cursor: auto;
+    }
+
+    &--reveal {
+      @media only screen and (min-width: $tablet-royal) {
+        animation-name: fadeIn;
+        -moz-animation-name: fadeIn;
+        -webkit-animation-name: fadeIn;
+      }
+    }
+  }
+}

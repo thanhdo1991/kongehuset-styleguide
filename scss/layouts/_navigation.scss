@@ -1,0 +1,475 @@
+// Navigation.
+.nav {
+  ul {
+    margin-bottom: rem(10px);
+  }
+}
+
+.header__logo {
+  margin: 0 auto;
+  max-width: 1140px;
+  text-align: center;
+  display: none;
+}
+
+
+.mega-menu {
+  background: rgba(255, 255, 255, 0.95);
+  left: 0;
+  overflow: auto;
+  padding-bottom: 70px;
+  padding-top: 50px;
+  position: fixed;
+  right: 0;
+  top: -1400px;
+  bottom: 1200px;
+  transition: all .5s ease 0s;
+  width: 100%;
+  z-index: -9;
+
+  .field-name-field-col-navigation,
+  .mega-menu-cols {
+      margin: 0 auto;
+      max-width: 1140px;
+  }
+
+  a {
+    color: $gray-33;
+
+    &:hover {
+      opacity: 1;
+      color: $gray-99;
+    }
+  }
+
+  .pager-load-more a {
+    color: $orange-1;
+    font-size: 1.4rem;
+  }
+
+  .cols {
+
+      margin: 0 auto;
+      width: 1140px;
+
+    > .col {
+
+      p {
+        color: $gray-33;
+        float: none;
+        line-height: rem(24px);
+        margin-bottom: rem(5px);
+        text-decoration: none;
+        padding-right: rem(20px);
+        font-size: 1rem;
+      }
+
+      ul.menu {
+        margin-left: 0;
+
+        li {
+          line-height: rem(24px);
+          list-style: outside none none;
+          margin-bottom: rem(5px);
+          margin-left: 0;
+        }
+      }
+    }
+
+    &.mega-menu-cols-2 {
+      width: 66.64%;
+    }
+  }
+
+  &.active{
+    top: rem(98px);
+    bottom: 0;
+  }
+}
+
+.pane-kon-pages-kongehuset-mega-menu {
+
+  .pane-content {
+    > ul.menu {
+      text-align: center;
+      margin-left: 0;
+
+
+      h3 {
+        @include dinpro-condmedium;
+        color: $gray-66;
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+        margin-top: 0;
+        text-align: left;
+        text-transform: uppercase;
+
+        a {
+          color: $gray-66;
+          font-size: inherit;
+
+          &:hover {
+            color: $gray-99;
+          }
+        }
+      }
+
+      .social-menu {
+        border-bottom: 1px solid #cbd0cc;
+        clear: both;
+        display: block;
+        float: none;
+        margin-bottom: rem(40px);
+        padding-bottom: rem(40px);
+        padding-top: rem(65px);
+        width: 100%;
+        max-width: 81.42857rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        .block-menu {
+          margin: 0 auto;
+          max-width: 1140px;
+          text-align: center;
+          width: 100%;
+
+          ul {
+            text-align: center;
+
+            li {
+              display: inline-block;
+              list-style: none;
+              margin: 0;
+              padding-top: 0;
+
+              a{
+                @include gotham-book;
+                color: #333;
+
+                &:before {
+                  font-family: 'kong';
+                  margin-right: 5px;
+                  color: #666;
+                }
+
+                &:hover {
+                  color: $orange-1;
+
+                  &:before {
+                    color: $gray-99;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        h2 {
+          @extend h3;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+.header {
+  .link {
+    &__left,
+    &__right {
+      @include susy-media(mobileOnly) {
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+.link {
+  &__left,
+  &__right {
+    > a,
+    span {
+      color: #a7b7b6;
+      @include dinpro-condmedium;
+      font-size: 2rem;
+      text-transform: uppercase;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    span {
+      margin: rem(0 30px);
+      cursor: pointer;
+      position: relative;
+      top: -3px;
+    }
+  }
+
+  &__left {
+    display: inline-block;
+    text-align: right;
+    padding-top: rem(10px);
+
+    > a {
+      display: inline-block;
+      float: right;
+    }
+  }
+  &__right {
+    text-align: left;
+    padding-top: rem(10px);
+
+    > a {
+      text-align: left;
+      float: left;
+    }
+  }
+}
+
+.header__behind {
+  .link {
+    &__left,
+    &__right {
+      > a,
+      span {
+        font-size: 1.5rem;
+        color: #A7B7B1;
+        margin: rem(0 6px);
+      }
+
+      span {
+        position: static;
+        top: 0;
+      }
+    }
+  }
+}
+
+.social-menu .content li.first {
+  margin-right: 10px !important;
+}
+
+
+/* Responsive Header */
+
+.pane-kon-pages-kongehuset-menu-mobile {
+  width: 50%;
+  position: fixed;
+  top: 0;
+  left: -50%;
+  bottom: 0;
+  overflow: auto;
+  z-index: 1000;
+  background-color: #a7b7b6;
+  padding-top: 50px;
+}
+
+.menu-mobile-item {
+  @include dinpro-condmedium;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  .menu {
+    .logo,
+    .menu {
+      display: none;
+    }
+
+    .menu.active {
+      display: block;
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  ul li {
+    background-color: #a7b7b6;
+    border-bottom: 1px none #fff;
+    border-top: 1px solid #fff;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    .toggle-submenu {
+      color: $white;
+      cursor: pointer;
+      font-size: 35px;
+      line-height: 35px;
+      position: absolute;
+      right: 5px;
+      top: 17px;
+      z-index: 3;
+
+      &:before {
+        @extend .icons-icomon;
+        content: "\e315";
+      }
+    }
+
+    &.active-item {
+      > .toggle-submenu  {
+        right: auto;
+        left: 0;
+
+        &:before {
+          content: "\e314";
+        }
+      }
+    }
+
+    &[class*="link__"] {
+      float: none;
+      font-size: inherit;
+      height: auto;
+      width: auto;
+      margin-left: 0;
+      padding-left: 0;
+      padding-top: 0px;
+      text-align: left;
+      width: 100%;
+
+      a {
+        float: none;
+      }
+    }
+
+    // Hidden icon search in mobile
+    .icon-search {
+      &:before {
+        display: none;
+        font-size: 0;
+        position: absolute;
+      }
+    }
+
+    a {
+      @include dinpro-condmedium;
+      color: $white;
+      display: block;
+      font-size: inherit;
+      margin-right: 0;
+      padding: 1.9rem rem(30px) 1.9rem rem(40px);;
+      position: relative;
+      text-transform: uppercase;
+      z-index: 2;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      li {
+        background-color: $white;
+
+        a {
+          border-bottom: 1px solid $blue-a7;
+          color: $grey;
+        }
+
+        &.last {
+          a {
+            border-bottom: none;
+          }
+        }
+
+        &.expanded {
+
+          .toggle-submenu {
+            color: $blue-a7;
+            padding: 0 10px;
+            right: 10px;
+
+            &:before {
+              content: "\e902";
+            }
+          }
+
+          &.active-item {
+            > .toggle-submenu {
+              left: auto;
+              right: 10px;
+              padding: 0 10px;
+
+              &:before {
+                content: "\f106";
+              }
+            }
+          }
+        }
+
+        li {
+          a {
+            color: $gray-99;
+          }
+        }
+      }
+    }
+  }
+
+  /* Custome for social block */
+  ul.language-switcher-locale-url,
+  #block-menu-menu-menu-socialize-header {
+    @include clearfix;
+    background-color: #a7b7b6;
+    border-bottom: 1px none #fff;
+    border-top: 1px solid #fff;
+    padding-left: rem(40px);
+    text-align: left;
+
+    li {
+      border: none;
+      display: inline-block;
+      margin: 0;
+      margin-right: 10px;
+      padding-left: 0;
+      width: auto;
+
+      a {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  #block-menu-menu-menu-socialize-header {
+    padding: 1.9rem 0;
+    padding-left: rem(40px);
+
+    h2 {
+      font-size: inherit;
+      max-width: rem(165px);
+      line-height: 1.2;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    ul li a {
+      padding: 10px 0;
+      font-size: 0;
+
+      &:before {
+        font-size: 1.4rem;
+        color: $orange-1;
+        width: rem(45px);
+        height: rem(45px);
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.pane-subholder {
+  .one-column-middle {
+    margin: 0;
+    width: 100%;
+  }
+}
+

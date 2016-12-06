@@ -1,0 +1,333 @@
+// Block Filter
+.box-filter {
+  &__filter {
+    @include dinpro-condmedium;
+    color: $gray-66;
+    cursor: pointer;
+    font-size: 1.1rem;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  &__toggle {
+    background-color: $blue-a7;
+    line-height: 0;
+    padding: rem(15px 20px 15px 20px);
+    text-align: center;
+  }
+
+  &__selected {
+    @include dinpro-condmedium;
+    background-color: $white;
+    color: $gray-66;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    max-width: rem(370px);
+    overflow: hidden;
+    padding: rem(15px 40px 11px 20px);
+    position: relative;
+    text-align: left;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 100%;
+
+    @include susy-media(mobileOnly) {
+      max-width: 100%;
+    }
+
+    &:before {
+      background: $white;
+      color: $gray-88;
+      font-family: kong;
+      font-size: rem(16px);
+      font-weight: bold;
+      padding: rem(0 20px 0 10px);
+      position: absolute;
+      right: rem(0);
+    }
+  }
+
+  &__select {
+    background-color: $white;
+    display: none;
+    left: 50%;
+    margin-left: rem(-185px);
+    padding: rem(5px 0);
+    position: absolute;
+    right: 0;
+    top: rem(66px);
+    width: rem(370px);
+    z-index: 10;
+
+    @include susy-media(mobileOnly) {
+      margin-left: 20px;
+      margin-right: 20px;
+      max-width: 100%;
+    }
+
+    &.active {
+      display: block;
+    }
+
+    &__item {
+      list-style: none;
+      margin-bottom: 0;
+      padding: rem(8px 20px);
+
+      a {
+        color: $gray-66;
+        font-size: 1.2rem;
+
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__contents {
+    &__content {
+      color: $gray-55;
+      display: none;
+      font-size: 1.2rem;
+      height: auto;
+      overflow: hidden;
+      padding: rem(0 20px);
+      width: 100%;
+
+      li {
+        font-size: 1.2rem;
+      }
+
+      @include susy-media(tablet) {
+        @include push(2 of $susy-desktop);
+        padding-left: rem(5px);
+        width: span(8 of $susy-desktop);
+      }
+
+      .field-name-field-section-links {
+        .field-item {
+          margin-bottom: rem(5px);
+        }
+      }
+    }
+
+    &__link {
+      bottom: rem(40px);
+      left: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    &__item {
+      background-color: rgba($blue-a7, .2);
+      position: relative;
+
+      &.active {
+        padding: rem(36px 0 95px);
+
+        .box-filter__contents__content {
+          display: block;
+        }
+      }
+
+      &.has-height {
+        .box-filter__contents__content {
+          height: rem(360px);
+
+          @include susy-media(tablet) {
+            height: rem(230px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.panel-filter {
+  margin-bottom: rem(20px);
+  text-align: left;
+
+  @include susy-media(tablet) {
+    margin-bottom: rem(45px);
+  }
+
+  form {
+    background-color: $blue-a7;
+    margin-bottom: rem(11px);
+    padding: rem(15px);
+
+    @include susy-media(mobileSmallOnly) {
+      padding: rem(15px 5px);
+    }
+
+    @include susy-media(tablet) {
+      padding: rem(3px 0 0);
+    }
+
+    > div {
+      @include dinpro-condmedium;
+      margin: 0 auto;
+      max-width: rem(347px);
+      text-align: center;
+      width: 100%;
+
+      @include susy-media(mobileOnly) {
+        max-width: 100%;
+      }
+
+      @include susy-media(tablet) {
+        max-width: 100%;
+      }
+
+      > div {
+        margin-bottom: rem(5px);
+        display: block;
+        margin-right: 0;
+
+        @include susy-media(tablet) {
+          display: inline-block;
+          margin-right: rem(18px);
+          vertical-align: top;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .form-item-category {
+      width: 100%;
+
+      @include susy-media(tablet) {
+        width: rem(186px);
+      }
+    }
+
+    .form-item-year {
+      width: 100%;
+
+      @include susy-media(tablet) {
+        width: rem(100px);
+      }
+    }
+
+    .form-item-month {
+      width: 100%;
+
+      @include susy-media(tablet) {
+        width: rem(125px);
+      }
+    }
+
+    .bootstrap-select {
+      width: 100% !important;
+
+      &.open {
+        .dropdown-toggle {
+          background-color: $white;
+          box-shadow: none;
+          outline: none;
+        }
+      }
+    }
+
+    .dropdown-toggle {
+      border-radius: 0;
+      background-color: $white;
+      border: 0;
+      color: $gray-66;
+      font-size: 1.1rem;
+      height: rem(50px);
+      letter-spacing: rem(1px);
+      line-height: rem(53px);
+      margin-bottom: rem(1px);
+      padding: rem(0 30px 0 20px);
+      text-transform: uppercase;
+
+      .filter-option {
+        @include dinpro-condmedium;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $white;
+        outline: none !important;
+      }
+
+      .bs-caret {
+        font-size: rem(18px);
+        line-height: rem(52px);
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $white;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      color: $gray-66;
+      font-size: 1.2rem;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      z-index: 20;
+
+      li {
+        margin-bottom: 0;
+
+        a {
+          @include dinpro-condmedium;
+          background-color: transparent;
+          color: $gray-66;
+          font-size: 1.1rem;
+          padding: rem(12px 20px);
+        }
+      }
+    }
+
+    .icon-angle-down:before {
+      font-weight: 600;
+      opacity: .9;
+    }
+  }
+
+  .view-orders-medals-and-appointments {
+    background-color: rgba($blue-a7, .2);
+    margin-top: rem(-20px);
+
+    > .view-content {
+      margin: 0 auto;
+      padding: rem(20px);
+
+      @include susy-media(tablet) {
+        padding: rem(54px 0 20px);
+        width: 63%;
+      }
+
+      p {
+        @include gotham-book;
+        color: $gray-55;
+        font-size: 1rem;
+        line-height: rem(23px);
+      }
+    }
+  }
+}
+
+.form-item,
+.form-actions {
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+  @include susy-media(tablet) {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,147 @@
+
+{% extends '../layouts/layout.twig' %}
+
+{% block title %}Styleguide{% endblock %}
+
+{% block page_heading %}Styleguide{% endblock %}
+
+{% block content %}
+
+  <div class="pagetype" data-page="page-compo"></div>
+  {% set pathComponent = "../blocks/" %}
+  {% set typeComponent = ".twig" %}
+  {% set prefixComponent = "block-" %}
+  {% set list_components = [
+    {
+      'id':'box-hero',
+      'name': 'Block Box Hero'
+    },
+    {
+      'id':'elements',
+      'name': 'Basic Elements'
+    },
+    {
+      'id':'slide-calender',
+      'name': 'box slide calender'
+    },
+    {
+      'id':'box-video',
+      'name': 'box video'
+    },
+    {
+      'id':'list-slide-month',
+      'name': 'List slide month'
+    },
+    {
+      'id':'grid-media',
+      'name': 'box gird media'
+    },
+    {
+      'id':'box-slide-image',
+      'name': 'Block box slide image'
+    },
+    {
+      'id':'image',
+      'name': 'box image'
+    },
+    {
+      'id':'box-feature',
+      'name': 'Block Box Feature'
+    },
+    {
+      'id':'list-media',
+      'name': 'box list media'
+    },
+    {
+      'id':'list-grid-image',
+      'name': 'Box Grid Image'
+    },
+    {
+      'id':'box-banner',
+      'name': 'Block Box Banner'
+    },
+    {
+      'id':'box-user',
+      'name': 'Box User'
+    },
+    {
+      'id':'grid-content',
+      'name': 'Block Grid Content'
+    },
+    {
+      'id':'box-slide-gallery',
+      'name': 'Box Slide Gallery'
+    },
+    {
+      'id':'box-user-timeline',
+      'name': 'Block User Timeline'
+    },
+    {
+      'id':'list-content',
+      'name': 'Box list content'
+    },
+    {
+      'id':'box-social-news',
+      'name': 'Social Block'
+    },
+    {
+      'id':'list-overlay',
+      'name': 'Block image overlay'
+    },
+    {
+      'id':'box-filter',
+      'name': 'Block Filter'
+    }
+  ] %}
+
+  {% for component in list_components %}
+    {% set componentPath = pathComponent ~ prefixComponent ~ component.id ~ typeComponent %}
+    <div class="component--item" id="{{component.id}}">
+      <h2 class="component--title">{{ loop.index }}. {{ component.name }}</h2>
+      <div class="component--demo">
+      {% include componentPath %}
+      </div>
+      <button class="show-code">Show/Hide Code</button>
+      <div class="component--source element-invisible">
+        <div class="component--html">
+          <h2 class="component--source--title">Markup</h2>
+          <pre  class="brush: php">
+            {% include componentPath %}
+          </pre>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+  <div class="component--list">
+    <div class="component--list--header">
+      <h2 class="component--title">Components List</h2>
+      <a title="Show List" class="show-list">+</a>
+      <a title="Hide List"   style="display:none" class="hide-list">-</a>
+    </div>
+    <div class="component--list--content">
+      <ul>
+        {% for component in list_components %}
+          <li class="component--list--item"><a href="#{{component.id}}">{{ loop.index }}. {{ component.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer_scripts %}
+  {{ parent() }}
+  <script type="text/javascript" src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.js"></script>
+  <script src="js/styleguide.js"></script>
+
+  <script type="text/javascript">
+     SyntaxHighlighter.all()
+  </script>
+
+{% endblock %}
+
+{% block content_sidebar %}{% endblock %}

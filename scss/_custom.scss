@@ -1,0 +1,1092 @@
+// Custom has menu admin
+/* Override when has adminmenu */
+.navbar-fixed {
+  .pane-kon-pages-kongehuset-mega-menu .pane-content > ul.menu .mega-menu.active {
+    top: rem(135px);
+  }
+
+  .header__behind .pane-kon-pages-kongehuset-mega-menu .pane-content > ul.menu .mega-menu.active,
+  .pane-subholder {
+    top: rem(86px);
+  }
+
+  .header__sticky {
+    top: rem(38px);
+  }
+
+  .open-menu {
+    top: 88px;
+  }
+
+  .submenholder {
+    top: rem(135px);
+    &.fixed {
+      top: rem(86px) !important;
+    }
+  }
+}
+
+/* Fix title blog */
+.page-node-45231 {
+  .node-title {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}
+
+/* Fix container for kontac page */
+.page-node-45226 {
+  .main-content {
+    > .container {
+      max-width: rem(1050px);
+    }
+  }
+}
+/*==============================================================
+=            Fix page title on pages have fixheader            =
+==============================================================*/
+
+.page-aktuelt {
+  .page-title {
+    margin-bottom: 20px;
+
+    @include susy-media(tablet) {
+      margin: rem(50px 0 50px 0);
+      padding-top: rem(60px);
+    }
+
+    @include susy-media(mobileSmallOnly) {
+      padding-top: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 10px
+    }
+
+    @include susy-media(mobileOnlyLarge) {
+      padding-top: 2rem;
+    }
+  }
+
+  .item-list .pager-load-more a {
+    font-size: 1.4rem;
+  }
+}
+
+
+.node-type-news,
+.node-type-event,
+.node-type-press,
+.node-type-speech,
+.hide-page-title {
+  .content-top {
+    @include susy-media(tablet) {
+      padding-top: rem(75px);
+    }
+  }
+
+  .content-top-full + .right-sidebar-content,
+  &.page-node-44931 {
+    .content-top {
+      padding-top: 0;
+    }
+  }
+}
+
+
+// Pressse page
+.page-node-41371,
+.page-taler,
+.title--big-space {
+  .navbar-fixed .submenholder {
+    top: 9.64286rem;
+  }
+
+  .submenholder {
+    top: 7rem;
+  }
+
+  .node-title-page-list h2.node-title,
+  .page-title {
+
+    @include susy-media(tablet) {
+      margin: rem(30px 0 50px);
+      padding-top: rem(60px);
+    }
+  }
+
+  .node-title-page-list {
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .content-top {
+    padding-top: 0;
+  }
+
+  .item-list .pager-load-more a,
+  .read-more--small {
+    font-size: 1.4rem;
+  }
+}
+
+/* Override change read-more size */
+
+.page-node-41371,
+.page-node-44061,
+.node-type-frontpage {
+  .read-more,
+  .read-more--small,
+  .more-link,
+  .links-inline a,
+  .pager-load-more a,
+  .more-link a,
+  .item-list .pager-load-more a,
+  .item-list .more-link a {
+    font-size: 1.4rem;
+  }
+
+}
+/*=====  End of Fix page title on pages have fixheader  ======*/
+/*====================================================
+=            Add margin-top for node tite            =
+====================================================*/
+.node-type-article {
+  .node-title {
+    //margin-top: rem(30px);
+  }
+}
+
+.pager-load-more {
+
+  li {
+    margin: 0;
+    display: inline-block;
+  }
+
+  a {
+    @extend .icon-arrow-right;
+    @extend .read-more;
+
+    &:before {
+      @extend .icons-icomon;
+      margin-right: rem(7px);
+    }
+  }
+}
+
+.item-list {
+  .pager-load-more {
+    padding-left: 0;
+
+    li {
+      margin: 0;
+      display: inline-block;
+      text-align: center;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    a {
+      @extend .icon-arrow-right;
+      @extend .read-more;
+
+      &:before {
+        @extend .icons-icomon;
+        margin-right: rem(7px);
+      }
+    }
+  }
+}
+
+// Style news list
+.top-content-list-grid {
+  position: relative;
+  padding-top: 10px;
+
+  .views-exposed-widgets {
+    margin-bottom: 0;
+
+    .widget-row {
+      float: left;
+      #edit-type-wrapper {
+        > label {
+          @include susy-media(mobileOnly) {
+            display: block;
+          }
+        }
+      }
+      .views-exposed-widget {
+        width: 100%;
+        @include dinpro-condmedium;
+
+        label {
+          color: $blue-a7;
+          display: inline-block;
+          font-size: 1.1rem;
+          font-weight: normal;
+          letter-spacing: rem(1px);
+          padding: rem(6px 15px 10px 0);
+          text-align: left;
+          text-transform: uppercase;
+          margin-bottom: 0;
+        }
+
+        .views-widget {
+          display: inline-block;
+
+          .form-item {
+            display: inline-block;
+
+            .form-item {
+              display: inline-block;
+
+              input, button {
+                display: inline-block;
+                margin-bottom: rem(3px);
+                margin-top: 0;
+                vertical-align: middle;
+              }
+
+              .option {
+                color: $gray-66;
+                font-size: 1.1rem;
+                font-weight: normal;
+                letter-spacing: rem(0.5px);
+                text-transform: uppercase;
+
+                @include susy-media(mobileOnly) {
+                  padding-bottom: 0;
+                  padding-top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .select-menu-sub {
+
+      .description {
+        display: none;
+      }
+
+      .widget-row {
+        float: none;
+        margin: 0 auto;
+        max-width: rem(1140px);
+        padding-left: rem(40px);
+        position: relative;
+
+        @include susy-media(tabletOnlyDesktop) {
+          padding-left: 3.143rem;
+        }
+
+        .views-exposed-widget {
+          padding-right: 0;
+          padding-top: 0;
+          width: auto;
+
+          .btn.dropdown-toggle.btn-default {
+            border-right: rem(1px) solid hsla(132, 5%, 81%, 0.2);
+
+            .filter-option.pull-left {
+              color: $gray-88;
+              font-size: 1.05rem;
+              font-weight: 400;
+              letter-spacing: rem(1px);
+              text-transform: uppercase;
+            }
+          }
+
+          label {
+            display: none;
+          }
+
+          &:first-child {
+            label {
+              display: block;
+              position: absolute;
+              z-index: 9;
+              left: 0;
+              top: rem(19px);
+
+              @include susy-media(tabletOnlyDesktop) {
+                left: rem(10px);
+              }
+
+              @include susy-media(mobileOnly) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.top-content-list-grid.panel-filter {
+
+  > .pane-content {
+    max-width: 100%;
+  }
+
+  form{
+    background: transparent;
+    padding: 0;
+    margin-bottom: rem(16px);
+
+    >div {
+      text-align: left;
+
+      @include susy-media(mobileOnly) {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .dropdown-menu li a{
+      @include gotham-book;
+      text-transform: initial;
+      font-size: 0.9rem;
+      color: $gray-66;
+      display: block;
+      white-space: nowrap;
+      padding: rem(10px 22px);
+      text-transform: none;
+
+      @include susy-media(mobileOnly) {
+        white-space: normal;
+      }
+    }
+  }
+
+  .views-submit-button {
+    display: none;
+  }
+}
+
+.vissom-group {
+  position: absolute;
+  right: rem(4px);
+  top: rem(7px);
+
+  .label {
+    @include dinpro-condmedium;
+    color: $blue-a7;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-bottom: rem(20px);
+    margin-left: rem(10px);
+    padding-top: rem(6px);
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .switch-viewmode {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0 !important;
+
+    > li {
+      float: left;
+      line-height: normal;
+      list-style: outside none none;
+      margin-left: rem(21px);
+      margin-bottom: 0;
+
+      > a {
+        color: $gray-66;
+        display: inline-block;
+        font-size: 0;
+        height: rem(15px);
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        text-indent: rem(-10000px);
+        width: rem(20px);
+      }
+
+      .grid {
+        &:before {
+          @extend .icons-icomon;
+          content: "\e904";
+          display: inline-block;
+          font-size: rem(27px);
+          left: rem(-5px);
+          opacity: 1;
+          position: absolute;
+          text-indent: 0;
+          top: rem(-6px);
+        }
+
+        &.active {
+          color: $orange;
+        }
+      }
+
+      .list {
+        &:before {
+          @extend .icons-icomon;
+          content: "\e903";
+          font-size: rem(16px);
+          opacity: 1;
+          position: absolute;
+          right: 0;
+          text-indent: 0;
+        }
+
+        &.active {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+// Style press page
+
+.select-content {
+  position: relative;
+
+  .grid-and-list-style {
+    overflow: hidden;
+
+    .box-list-content {
+      padding-top: 0;
+    }
+
+    &.pane-taler .vissom-group {
+      top: 0;
+    }
+  }
+
+  form {
+    padding: 0;
+
+    .views-exposed-widget {
+      padding: 0;
+      width: 100%;
+
+      @include susy-media(tablet) {
+        width: auto;
+        float: none;
+      }
+    }
+  }
+
+  .views-exposed-form {
+    margin-right: 0;
+    padding: rem(15px 10px 15px 10px);
+
+    @include susy-media(tablet) {
+      display: inline-block;
+      padding: rem(20px 10px);
+      width: 100%;
+    }
+
+    .form-item  {
+      display: inline-block;
+      min-width: rem(117px);
+      width: 100%;
+      margin-bottom: 10px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      .dropdown-toggle {
+        margin-bottom: 0;
+      }
+
+      @include susy-media(tablet) {
+        margin: rem(0 10px);
+        width: auto;
+      }
+
+      label {
+        display: none;
+      }
+    }
+
+    .views-exposed-widgets {
+      margin-bottom: 0;
+
+      @include susy-media(tablet) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .description {
+    display: none;
+  }
+
+  .view-filters {
+    margin-bottom: rem(70px);
+    position: relative;
+  }
+
+  .vissom-group {
+    top: auto;
+    bottom: rem(-70px);
+    right: 0;
+  }
+}
+
+.grid-and-list-style_showimg  .box-list-content {
+
+  .box-grid-content__item {
+    border-bottom: rem(1px) solid $gray-1;
+
+    @include susy-media(mobileOnly) {
+      margin-bottom: 0;
+      padding-bottom: rem(15px);
+    }
+  }
+
+  .box-grid-content__image {
+    display: inline-block;
+    float: left;
+    margin-right: rem(10px);
+
+    img {
+      max-width: rem(92px);
+      height: auto;
+    }
+  }
+
+  .box-grid-content__wrap-content {
+    overflow: hidden;
+    border-bottom: none;
+  }
+}
+
+.grid-content-hasborder-top .box-list-content {
+  .box-grid-content__item {
+
+    @include susy-media(tablet-landscape) {
+      margin-bottom: rem(11px);
+      padding-bottom: rem(22px);
+    }
+  }
+
+  .box-grid-content__image {
+    display: none;
+  }
+
+  .box-grid-content__wrap-content {
+    border-bottom: none;
+    padding-top: rem(16px);
+
+    .box-grid-content__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.grid-content-hasborder-top .box-grid-content {
+  .box-grid-content__item {
+    margin-bottom: rem(0);
+    padding-bottom: rem(0);
+  }
+
+  .box-grid-content__image {
+    display: none;
+  }
+
+  .box-grid-content__wrap-content {
+    border-bottom: none;
+    border-top: rem(1px) solid $gray-1;
+    padding-top: rem(16px);
+  }
+}
+
+.top-content-list-grid.panel-filter {
+  margin-bottom: rem(5px);
+}
+
+// .page-aktuelt .one-column-wrapper {
+//   padding-top: rem(50px);
+// }
+
+.gallery-more a {
+  margin-top: rem(20px);
+}
+
+
+/*==================================================
+=            Override node-type-gallery            =
+==================================================*/
+.node-type-gallery {
+  .node-title {
+    border: 0;
+    margin-bottom: 0;
+  }
+
+  .teaser-description {
+    padding-top: 3.92857rem;
+    border-top: 0.07143rem solid #9f6b46;
+  }
+}
+
+
+/*=====  End of Override node-type-gallery  ======*/
+
+/*====================================================
+=            Theming block Accept cookies            =
+====================================================*/
+#sliding-popup.sliding-popup-bottom {
+  background-color: $blue-a7;
+  border-top: 1px solid $orange-1;
+  height: inherit !important;
+  left: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 20px;
+  width: 100% !important;
+
+  .popup-content {
+    max-width: 100%;
+
+    #popup-text {
+      p {
+        @include gotham-book;
+        color: $gray-33 !important;
+        font-size: 1.1rem;
+        font-weight: normal;
+      }
+      h2 {
+        color: $gray-33 !important;
+        font-size: rem(20px);
+        font-weight: normal;
+      }
+    }
+    #popup-buttons {
+      button {
+        @include dinpro-condmedium;
+        background: none;
+        border: none;
+        filter: none;
+        box-shadow: none;
+        text-shadow: none;
+        color: $orange-1;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        transition: all 0.3s ease 0s;
+        font-weight: normal;
+
+        i {
+          position: relative;
+          top: 2px;
+          left: -6px;
+        }
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
+      .find-more-button {
+        display: none;
+      }
+    }
+  }
+}
+
+/*=====  End of Theming block Accept cookies  ======*/
+
+/*===================================================
+=            Override style of ajax icon            =
+===================================================*/
+
+.ajax-progress {
+  position: absolute;
+
+  .throbber {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin-top: -22px;
+    margin-left: -10px;
+    background-image: url('../images/balls.gif');
+  }
+
+  .message {
+    display: none;
+  }
+}
+
+/*=====  End of Override style of ajax icon  ======*/
+
+// fixbug box medila list in sidebar
+.sidebar-right {
+  .box-list-media__item {
+    margin-bottom: 11px;
+  }
+}
+
+
+// Fix bug submenu header
+.submenu-item:first-child h3 {
+  padding-left: 0;
+}
+
+.pane-subholder > *,
+.submenholder > * {
+  padding-left: 20px;
+}
+
+.bootstrap-select.btn-group .dropdown-menu.open  {
+  background: white;
+  border-color: #cbd0cc rgba(205, 208, 206, 0.27) rgba(204, 209, 205, 0.27) rgba(204, 209, 205, 0.27);
+  border-style: none solid solid;
+  border-width: 1px;
+  overflow: hidden;
+  padding: rem(8px 0);
+  position: absolute;
+  top: 51px;
+  transition: all .5s ease 0s;
+  width: 250px;
+  z-index: 1;
+  margin-left: 0;
+
+
+  @include susy-media(mobileOnly) {
+    z-index: 9;
+  }
+}
+
+//update fix bug submenu heder lable
+.select-menu-sub .views-exposed-widget:first-child .form-item .bootstrap-select button {
+  border-left: 0.07143rem solid rgba(204, 209, 205, 0.2);
+}
+
+// fix safari
+_:-webkit-full-screen:not(:root:root),.vissom-group .label {
+    vertical-align: middle;
+    margin-top: 23px;
+  }
+
+/*=====================================================
+=            Custom style for Aktuelt page            =
+=====================================================*/
+
+.page-aktuelt {
+  @include susy-media(mobileOnly) {
+    .select-menu-sub  {
+      .widget-row  {
+        padding-left: 0 !important;
+      }
+      .views-exposed-widget  {
+        float: none;
+
+        .views-widget,
+        .form-item {
+          display: block !important;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .widget-row {
+      float: none;
+    }
+
+    #edit-type-wrapper .views-exposed-widget  {
+      float: left;
+    }
+    .form-type-select {
+      margin-top: 6px;
+    }
+
+    .select-menu-sub {
+      margin-bottom: 15px;
+      margin-top: 0 !important;
+    }
+
+    .vissom-group {
+      // left: 0;
+      top: 10px;
+      right: 0;
+
+      .label {
+        margin-left: 0;
+      }
+
+      .switch-viewmode {
+        float: right;
+        margin-top: 10px;
+      }
+    }
+    .top-content-list-grid .views-exposed-widgets .select-menu-sub  + .widget-row {
+      @include clearfix;
+      float: none;
+      position: relative;
+      padding-top: 35px;
+      label {
+        float: left;
+      }
+    }
+  }
+  .top-content-list-grid.panel-filter form > div {
+    max-width: 100%;
+  }
+}
+
+.top-content-list-grid .views-exposed-widgets .widget-row .views-exposed-widget .views-widget .form-item .form-item .option {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.top-content-list-grid .views-exposed-widgets .widget-row .views-exposed-widget label {
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.top-content-list-grid .views-exposed-widgets .widget-row .views-exposed-widget {
+  margin-top: 0;
+  line-height: 13px;
+  padding-top: 0;
+}
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+ .vissom-group .label,
+ .top-content-list-grid .vissom-group .label {
+    position: absolute;
+    left: -39px;
+    top: 0;
+    margin: 0;
+
+  }
+
+  ::i-block-chrome,.vissom-group .label {
+   color:blue;
+  }
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+{
+ .vissom-group .label,
+ .top-content-list-grid .vissom-group .label {
+    padding: 0;
+    @include susy-media(mobileOnly) {
+      margin-top: 10px;
+    }
+  }
+}
+
+.top-content-list-grid .vissom-group {
+  position: absolute;
+  right: 0;
+  top: 4px;
+}
+
+.form-item.form-type-select.form-item-published-year .bootstrap-select.btn-group .dropdown-menu.open {
+  width: 100px;
+}
+
+.dropdown-menu li a {
+  white-space: nowrap;
+
+  @include susy-media(mobileOnly) {
+    white-space: normal;
+  }
+}
+/*=====  End of Custom style for Aktuelt page  ======*/
+/*=====  Fixbug safari ======*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .select-content .vissom-group {
+    bottom: -45px;
+  }
+
+  .select-content .views-exposed-form {
+    padding: 15px;
+  }
+
+  .select-content .views-exposed-form .views-exposed-widgets {
+    display: inline-block;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .select-content .vissom-group {
+    bottom: -47px;
+  }
+
+  .box-list-content .box-grid-content__wrap-content .box-grid-content__title {
+    margin-top: 5px;
+    line-height: 25px;
+  }
+  .page-node-41371 {
+
+    .box-list-content .box-grid-content__wrap-content .box-grid-content__title {
+      line-height: 18px;
+    }
+  }
+}
+
+/* Fix box semore in sideba */
+.sidebar-right {
+  .pane-panels-mini {
+    .panel-pane {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border: 0;
+    }
+  }
+}
+
+/* node style kalender */
+.group-date span.date-display-single {
+    margin: 0px;
+}
+
+/* Override filter */
+.bootstrap-select.btn-group .dropdown-menu.open {
+  width: auto;
+
+  @include susy-media(mobileOnly) {
+    right: 0;
+  }
+}
+
+@supports (-webkit-appearance:none) {
+  @include susy-media(mobileOnly) {
+    .page-aktuelt .vissom-group .switch-viewmode {
+      //margin-top: 4px;
+    }
+
+    .page-aktuelt .top-content-list-grid .views-exposed-widgets .select-menu-sub + .widget-row {
+      padding-top: 26px;
+    }
+  }
+}
+
+/* fix responsevi */
+@include susy-media(mobileOnly) {
+  .page-aktuelt .top-content-list-grid .views-exposed-widgets .select-menu-sub + .widget-row label {
+    float: none;
+    margin-top: -15px;
+    padding-bottom: 10px;
+  }
+
+/* node-type-news */
+
+  .node-type-news {
+    .submenholder {
+      display: none;
+    }
+  }
+
+  /* sidebar-right semore */
+  .sidebar-right {
+    .box-list-media__wrap {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+  /* .node-title */
+  .node-title {
+    font-size: 1.7rem;
+  }
+
+
+  .select-content .views-exposed-form .views-exposed-widgets {
+    width: 100%;
+  }
+}
+
+@include susy-media(mobileTabletOnly) {
+  /* page-node-44061 */
+  .page-node-44061 {
+    .slide-image.box-image--slider {
+      margin-bottom: 30px;
+    }
+
+    .pane-subholder.submenholder {
+      display: none;
+    }
+  }
+}
+
+/* Fix for safiri */
+/* Safari 9.0+ */
+
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+  // Fix KON-219
+  .description {
+    letter-spacing: -0.07143rem;
+  }
+
+  .page-aktuelt .vissom-group .switch-viewmode {
+    //margin-top: 0;
+  }
+}
+
+/*===============================================
+=            Customize for reponsive            =
+===============================================*/
+// filter
+@include susy-media(mobileOnly) {
+  .paragraphs-item-tabbed-content {
+    .box-filter__toggle {
+      padding: rem(10px 20px);
+    }
+
+    .box-filter__select {
+      top: rem(60px);
+      left: 0;
+      right: 0;
+      width: inherit;
+    }
+  }
+}
+
+
+/*=====  End of Customize for reponsive  ======*/
+
+
+
+/* === Style mapp ==== */
+.gmap-control {
+
+  .gm-style {
+
+    &-iw {
+
+    }
+
+    .gmap-popup {
+      img {
+        float: left;
+        margin-right: 10px;
+        width: 120px;
+      }
+
+      a {
+        @include dinpro-condmedium;
+        color: $orange;
+        display: block;
+        font-size: 1.2rem;
+        line-height: rem(20px);
+        margin-left: rem(10px);
+        padding-right: rem(10px);
+        padding-top: rem(12px);
+        text-transform: uppercase;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.gmap-map {
+  max-width: 100%;
+}

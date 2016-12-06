@@ -1,0 +1,117 @@
+// Style component box image
+.box-field-image {
+  text-align: center;
+
+  .view-content {
+    display: inline-block;
+    line-height: 0;
+    margin-bottom: rem(30px);
+    overflow: hidden;
+    text-align: center;
+
+    @include susy-media(tablet-landscape) {
+      margin-bottom: rem(65px);
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-bottom: rem(10px);
+    position: relative;
+
+    @include susy-media(tablet-landscape) {
+      padding: rem(0 3px);
+      vertical-align: middle;
+      width: span(6 of $susy-desktop);
+    }
+
+    &:hover {
+      .box-field-image {
+        &__content {
+          display: block;
+        }
+      }
+    }
+
+    &.views-row-first.views-row-last {
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+      width: 100%;
+
+      @include susy-media(tablet) {
+        width: auto;
+      }
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    background: $white;
+    bottom: rem(15px);
+    display: none;
+    left: rem(15px);
+    padding: 10px;
+    position: absolute;
+    text-align: left;
+
+    @include susy-media(tablet) {
+      bottom: rem(30px);
+      left: rem(25px);
+    }
+
+    &.is-hover {
+      right: rem(15px);
+
+      @include susy-media(tablet) {
+        right: rem(25px);
+      }
+    }
+
+    .field-name-field-mediadescription p {
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .field-name-field-file-image-title-text,
+    .field-name-field-mediadescription {
+      @include jeles-regularregular;
+      color: $gray-66;
+      font-size: .9rem;
+      font-style: italic;
+      line-height: 1.5;
+      margin-bottom: rem(7px);
+    }
+
+    .field-name-field-photographer {
+      @include dinpro-condmedium;
+      bottom: 10px;
+      color: $gray-99;
+      font-size: .9rem;
+      letter-spacing: rem(1px);
+      line-height: 1.5;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    .field-label {
+      font-weight: normal;
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  .box-field-image .view-content {
+    display: inline-block;
+  }
+
+  .box-field-image {
+    text-align: center;
+  }
+}

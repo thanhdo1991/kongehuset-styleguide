@@ -1,0 +1,58 @@
+// VARIABLES
+// Define all variables (aside from colors) in this document. This includes breakpoint, sizes, etc.
+
+//Breakpoints
+$mobile-landscape: 480px;
+$mobile-landscape-large: 500px;
+$tablet: 768px;
+$tablet-landscape: 992px;
+$desktop: 1140px;
+$desktop-wide: 1280px;
+$desktop-superwide: 1440px;
+$desktop-fixfeature: 1178px;
+$subperdesktop: 1367px;
+
+// Grid variables
+$container-margin: 15px;
+
+$column-mobile: 4;
+$column-tablet: 8;
+$column-desktop: 12;
+
+//Font variables
+$base-font-size: 14px;
+$base-line-height: 1.4;
+
+// Extra small screen / phone
+//** Deprecated `@screen-xs` as of v3.0.1
+$screen-xs:                  480px;
+//** Deprecated `@screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs;
+//** Deprecated `@screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min;
+
+// Small screen / tablet
+//** Deprecated `@screen-sm` as of v3.0.1
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+//** Deprecated `@screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min;
+
+// Medium screen / desktop
+//** Deprecated `@screen-md` as of v3.0.1
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+//** Deprecated `@screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min;
+
+// Large screen / wide desktop
+//** Deprecated `@screen-lg` as of v3.0.1
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+//** Deprecated `@screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);

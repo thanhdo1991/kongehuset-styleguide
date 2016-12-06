@@ -1,0 +1,57 @@
+{% set boxVideo  = [
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/pnHxIk0SVjo" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  },
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/qCY8fxIYJPw" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  },
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/mikfm5cofVE" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  },
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/EtReC_NDE2U" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  },
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/pnHxIk0SVjo" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  },
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/qCY8fxIYJPw" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  },
+  {
+    'video' : '<iframe width="255" height="143" src="https://www.youtube.com/embed/mikfm5cofVE" frameborder="0" allowfullscreen></iframe>',
+    'typevideo': 'video',
+    'title': 'Nytårstaflet den Kongelige familie ankommer'
+  }
+]
+%}
+{% block contenBoxVideo %}
+  <div class="container">
+    <div class=" box-video">
+      {% for item in boxVideo %}
+        <div class="box-video__item">
+          <div class="box-video__video">{{ item.video }}</div>
+          <div class="box-video__type">
+            <a href="#">{{ item.typevideo }}</a>
+          </div>
+          {% if item.title is not empty %}
+            <div class="box-video__title">
+              <a href="#">{{ item.title }}</a>
+          </div>
+        {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+</div>
+{% endblock %}

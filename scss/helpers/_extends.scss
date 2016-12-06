@@ -1,0 +1,21 @@
+//Clearfix
+
+%clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+
+$sans: 'Din Next LT pro', 'Dinpro condmedium', sans-serif;
+$serif: Jeles, serif;

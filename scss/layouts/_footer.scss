@@ -1,0 +1,149 @@
+// Style footer
+.footer {
+  background-color: $white;
+  border-top: rem(1px) solid $gray-1;
+  line-height: 0;
+  margin-top: rem(66px);
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+
+  @include susy-media(tablet) {
+    height: rem(110px);
+    text-align: normal;
+  }
+
+  &__bottom {
+    background-color: $blue-a7;
+    color: $white;
+    margin-top: rem(10px);
+    padding-bottom: rem(10px);
+    width: 100%;
+
+    @include susy-media(tablet) {
+      bottom: 0;
+      height: rem(40px);
+      left: 0;
+      margin-top: 0;
+      padding-bottom: 0;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__menu {
+    @include susy-media(tablet) {
+      @include span(8 of $susy-desktop);
+    }
+
+    ul {
+      display: inline-block;
+      margin: 0;
+      text-align: center;
+
+      @include susy-media(tablet) {
+        display: block;
+        text-align: normal;
+      }
+
+      li {
+        @include dinpro-condmedium;
+        display: inline-block;
+        font-size: .9em;
+        font-style: normal;
+        letter-spacing: .03125rem;
+        list-style: outside none none;
+        margin-bottom: 0;
+        margin-right: .625rem;
+        margin-top: rem(10px);
+        padding: 0;
+        text-align: left;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include susy-media(tablet) {
+          float: left;
+        }
+
+        a {
+          color: $white;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  &__inner {
+    background: $white;
+    margin: rem(-23px) auto 0;;
+    width: rem(120px);
+
+    .copyright {
+      @include dinpro-condmedium;
+      color: $gray-66;
+      font-size: .7em;
+      line-height: rem(12px);
+      margin-top: rem(8px);
+      text-align: center;
+    }
+  }
+
+  &__logo {
+    height: rem(35px);
+    margin: 0 auto;
+    width: rem(40px);
+  }
+}
+
+// Style bottom footer link menu, social icon
+.box-social {
+  display: inline-block;
+  position: relative\9;
+  top: 10px\9;
+
+  @include susy-media(tablet) {
+    float: right;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+
+    li {
+      float: left;
+      height: rem(30px);
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      padding: rem(2px 0 0 0);
+      width: rem(30px);
+    }
+  }
+
+  &__icon {
+    color: transparent;
+    display: block;
+    height: rem(30px);
+    width: rem(30px);
+
+    &::before {
+      color: $white;
+      cursor: pointer;
+      display: block;
+      font-size: 1.1em;
+      line-height: rem(30px);
+      padding-left: rem(8px);
+      padding-top: rem(5px);
+    }
+  }
+}
+
+// Fix foooter
+
+footer.footer.footer-fix {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+}

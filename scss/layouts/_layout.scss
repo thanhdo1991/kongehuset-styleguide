@@ -1,0 +1,105 @@
+// LAYOUT
+// This is the main layout file.
+// This file should be used to define the primary page layout that each of the page types will be extending.
+// This includes global styles for html, body, etc.
+
+@viewport{
+  zoom: 1;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1;
+}
+
+//Enable font-smoothing
+html {
+  @include helvetica;
+  font-size: $base-font-size; // Don't modify static unit.
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  line-height: $base-line-height;
+}
+
+body {
+  // Disable in production mode;
+  //@include show-breakpoints;
+  @include gotham-book;
+  background-color: $white;
+  color: $gray;
+  font-size: rem(14px);
+  line-height: rem(29px);
+  -webkit-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+
+}
+
+.full-page {
+  .main-content > .container {
+    max-width: inherit;
+  }
+}
+
+.sidebar-right {
+
+  .panel-pane {
+    border-bottom: rem(1px) solid $orange;
+    margin-bottom: rem(18px);
+    padding-bottom: rem(20px);
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  h3 {
+    @include dinpro-condmedium;
+    color: $gray-99;
+    font-size: 1.6rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 0;
+    padding-bottom: rem(17px);
+    padding-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  strong {
+    @include gotham;
+    color: $gray-66;
+    font-size: 1.05rem;
+    font-weight: normal;
+    line-height: rem(25px);
+  }
+
+  h2 {
+    margin-bottom: rem(17px);
+  }
+}
+
+[class*="mega-menu-cols-"] {
+  @include clearfix;
+
+  > .col {
+    float: left;
+    padding: 0 25px;
+    text-align: left;
+    margin-top: -6px;
+
+    &.odd {
+      padding-left: 10px;
+    }
+  }
+}
+
+$grid-columns: 5;
+@for $i from 1 through $grid-columns {
+  .mega-menu-cols-#{$i} > .col { width: 100%/$i}
+}

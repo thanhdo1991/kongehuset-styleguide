@@ -1,0 +1,72 @@
+// Block List content.
+$box-grid-content: '.box-grid-content';
+
+.box-list-content {
+  padding-top: rem(50px);
+  padding-right: 0;
+  padding-left: 0;
+  border-top: rem(1px) solid $gray-1;
+
+  .view-content {
+    height: inherit !important;
+  }
+
+  &__item {
+    border-bottom: rem(1px) solid $gray-ef;
+    padding: rem(27px 0);
+
+    @include susy-media(tablet) {
+      align-items: center;
+      display: flex;
+    }
+
+    .meta {
+      margin-right: rem(20px);
+      padding-bottom: 0;
+    }
+  }
+
+  &__title {
+    @include gotham-book;
+    font-size: 1.1rem;
+    line-height: rem(23px);
+    margin: 0;
+
+    a {
+      color: $gray-55;
+    }
+  }
+
+  // Update fix list.
+  #{$box-grid-content}__image {
+    display: none;
+  }
+
+  #{$box-grid-content}__item {
+    left: 0 !important;
+    opacity: 1!important;
+    padding: 0;
+    position: relative !important;
+    top: 0 !important;
+    width: 100%;
+  }
+
+  #{$box-grid-content}__wrap-content {
+    border-bottom: rem(1px) solid  $gray-ef;
+
+    .meta {
+      float: left;
+      margin-right: 20px;
+
+      @include susy-media(mobileOnly) {
+        display: block;
+        float: none;
+      }
+    }
+
+    #{$box-grid-content}__title {
+      line-height: 30px;
+      overflow: hidden;
+    }
+  }
+}

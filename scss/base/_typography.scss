@@ -1,0 +1,613 @@
+// TYPOGRAPHY
+// Define all typographic styles in this file.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include dinpro-condmedium;
+  font-weight: normal;
+  margin-bottom: rem(20px);
+  margin-top: rem(20px);
+}
+
+h1 {
+  @include jeles-regularregular;
+  font-size: rem(38px);
+  line-height: rem(44px);
+}
+
+h2 {
+  font-size: rem(32px);
+  line-height: rem(36px);
+}
+
+h3 {
+  font-size: rem(24px);
+  line-height: rem(30px);
+}
+
+h4 {
+  font-size: rem(18px);
+  line-height: rem(24px);
+  margin-top: rem(10px);
+}
+
+h5 {
+  font-size: rem(14px);
+  line-height: rem(20px);
+  margin-top: rem(10px);
+}
+
+h6 {
+  font-size: rem(12px);
+  line-height: rem(18px);
+  margin-top: rem(10px);
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+  white-space: normal;
+
+  &:hover {
+    -ms-opacity: .6;
+    opacity: .6;
+    text-decoration: none;
+  }
+}
+
+p {
+  @include gotham-book;
+  color: $gray-55;
+  font-size: 1.2rem;
+  line-height: rem(29px);
+  margin-bottom: rem(20px);
+  word-wrap: break-word;
+}
+
+.content__left,
+.paragraphs-item-html-block {
+  .field-type-text-long {
+    font-size: 1.2rem;
+
+    ul,
+    ol {
+      margin-bottom: rem(20px);
+    }
+  }
+}
+
+.content__left {
+  .field-type-text-long {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include jelesbold;
+      color: $gray-66;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: rem(30px);
+    }
+
+    h2 {
+      font-size: rem(24px);
+    }
+
+    h3 {
+      @include jelesbold;
+      border: 0;
+      color: $gray-66;
+      font-size: rem(17px);
+      line-height: rem(40px);
+      margin-bottom: 0;
+      padding: 0;
+      text-align: left;
+      text-transform: inherit;
+      width: 100%;
+    }
+
+    h4 {
+      font-size: rem(15px);
+    }
+
+    p {
+      margin-bottom: rem(29px);
+    }
+  }
+}
+
+
+
+iframe {
+  width: 100%;
+}
+
+hr {
+  border-color: $orange;
+  border-style: solid;
+  border-width: rem(0 0 1px);
+  margin: rem(15px 0 10px 0);
+
+  @include susy-media(tablet-landscape) {
+    margin: rem(35px 0 31px 0);
+  }
+}
+
+// List styles defaults.
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul,
+ol {
+  list-style-position: outside;
+  margin-left: 15px;
+
+  li {
+    margin-bottom: rem(10px);
+  }
+}
+
+.pane-title {
+  @include dinpro-condmedium;
+  color: $blue-a7;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  margin: 0;
+  padding: rem(40px 0 30px);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.block-title {
+  .pane-title {
+    border-top: rem(1px) solid $orange;
+    color: $blue-a7;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: rem(15px 0 20px);
+    text-align: center;
+    text-transform: uppercase;
+
+    @include susy-media(tablet) {
+      font-size: 2.4rem;
+      padding: rem(40px 0 30px);
+      width: 83.33%;
+    }
+
+    @include susy-media(tablet-landscape) {
+      width: 73%;
+    }
+  }
+}
+
+.one-column-item {
+  .subheader {
+    .pane-title {
+      margin: 0 auto;
+      width: 83.33%;
+
+      @include susy-media(tablet-landscape) {
+        width: 74.3%;
+      }
+    }
+  }
+}
+
+.panel-node-title {
+  @include jeles-regularregular;
+  border-bottom: rem(1px) none $orange;
+  border-style: none;
+  color: $gray-66;
+  font-size: 3rem;
+  letter-spacing: 0;
+  margin-bottom: rem(40px);
+  padding-bottom: rem(30px);
+  text-transform: none;
+}
+
+.sidebar-block-title {
+  @include dinpro-condmedium;
+  border-top: rem(1px) none $black;
+  color: $gray-99;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-top: 0;
+  padding-bottom: rem(20px);
+  padding-top: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.read-more {
+  @include dinpro-condmedium;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  color: $orange-1;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding: rem(0 10px);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+  width: 100%;
+
+  &:hover {
+    cursor: pointer;
+    opacity: .9;
+    transform: scale(1.03);
+    transition: .3s;
+  }
+}
+
+.sidebar {
+  h2 {
+    color: $gray-99;
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    margin-top: 0;
+    padding-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: $gray-66;
+    font-size: 1.05rem;
+    line-height: rem(25px);
+    padding-top: 0;
+  }
+
+  &__content {
+    @include susy-media(tablet) {
+      padding-right: rem(30px);
+    }
+  }
+
+  .pane-title {
+    margin-bottom: rem(14px);
+    padding-bottom: 0;
+  }
+}
+
+.panel-title-has-border {
+  display: block;
+  margin: 0 auto;
+  width: 75%;
+
+  .panel-title {
+    @include dinpro-condmedium;
+    border-top: rem(1px) solid $orange-1;
+    color: $blue-a7;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: rem(40px 0 30px);
+    text-align: center;
+  }
+}
+
+.border-oneline {
+  border-top: rem(1px) solid $orange-1;
+}
+
+.subheader {
+  @include dinpro-condmedium;
+  border-top: rem(1px) solid $orange;
+  color: $blue-a7;
+  display: block;
+  font-size: 2rem;
+  margin: 0 auto;
+  padding: rem(30px 0 30px);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include susy-media(tablet) {
+    font-size: 2.4rem;
+    padding: rem(44px 0 25px);
+    width: 90%;
+  }
+
+  @include susy-media(tablet-landscape) {
+    width: 80%;
+  }
+}
+
+.node-type-section {
+  .description,
+  .small-title {
+    max-width: rem(750px);
+    width: 100%;
+
+    @include susy-media(tablet) {
+      width: 90%;
+    }
+
+    @include susy-media(tablet-landscape) {
+      width: 100%;
+    }
+  }
+}
+
+.description,
+.small-title {
+  @include jeles-regularregular;
+  color: $gray-55;
+  display: block;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: rem(-1px);
+  line-height: rem(31px);
+  margin: 0 auto;
+  padding-bottom: rem(30px);
+  text-align: center;
+
+  @include susy-media(tablet) {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.3rem;
+    padding-bottom: rem(70px);
+    width: 80%;
+  }
+
+  @include susy-media(tablet-landscape) {
+    width: 60%;
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  // Safari only override.
+  .description {
+    letter-spacing: 0;
+  }
+
+  ::i-block-chrome,
+  .description {
+    letter-spacing: rem(-1px);
+  }
+}
+
+.node-title {
+  @include jeles-regularregular;
+  border-bottom: rem(1px) solid $orange;
+  color: $gray-66;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: rem(30px);
+  margin-top: 0;
+  padding-bottom: rem(31px);
+
+  @include susy-media(mobileLandscape) {
+    font-size: 2rem;
+    margin-bottom: rem(55px);
+  }
+
+  @include susy-media(tablet) {
+    font-size: 2.9rem;
+    line-height: rem(55px);
+  }
+}
+
+.teaser-description {
+  @include jeles-regularregular;
+  color: $gray-66;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: rem(30px);
+  margin-bottom: rem(24px);
+
+  @include susy-media(mobileOnly) {
+    margin-top: 20px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.read-more--small {
+  @extend .read-more;
+  font-size: rem(17px);
+  letter-spacing: rem(.5px);
+  margin-left: rem(12px);
+  margin-top: rem(9px);
+  padding-left: rem(20px);
+  position: relative;
+  text-align: center;
+  transition: all 300ms ease 0s;
+  width: auto;
+
+  &:before {
+    background-color: $orange-1;
+    content: '';
+    height: rem(1px);
+    left: rem(-1px);
+    margin-top: rem(-2px);
+    position: absolute;
+    top: 50%;
+    width: rem(11px);
+
+    @include susy-media(mobileOnly) {
+      margin-top: rem(-3px);
+    }
+  }
+
+  &:after {
+    background: $orange-1;
+    content: '';
+    height: rem(11px);
+    left: rem(4px);
+    margin-top: rem(-7px);
+    position: absolute;
+    top: 50%;
+    width: rem(1px);
+
+    @include susy-media(mobileOnly) {
+      margin-top: rem(-8px);
+    }
+  }
+
+  &.showing {
+    &:after {
+      display: none;
+    }
+  }
+
+  &:hover {
+    opacity: .9;
+    transform: scale(1.02);
+    transition: all 300ms ease 0s;
+  }
+}
+
+.anchor_links {
+  ul {
+    margin-bottom: 0;
+    padding-top: rem(16px);
+
+    li {
+      display: inline-block;
+      margin: rem(0 10px 0 0);
+      padding-left: rem(13px);
+
+      a {
+        @include dinpro-condmedium;
+        color: $gray-88;
+        float: left;
+        font-size: 1.1rem;
+        letter-spacing: rem(1px);
+        line-height: 1.5;
+        text-transform: uppercase;
+
+        &:hover,
+        &.active {
+          color: $orange;
+        }
+      }
+    }
+  }
+}
+
+.pane-page-title-list {
+  margin-bottom: 10px;
+  margin-top: 20px;
+
+  h1,
+  h2 {
+    @include dinpro-condmedium;
+    border-bottom: 1px solid $orange-1;
+    color: $blue-a7;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: rem(29px);
+    margin-top: 0;
+    padding-bottom: rem(15px);
+    padding-top: rem(41px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &.panel-pane-one-linne {
+    margin-bottom: 0;
+    margin-top: 15px;
+    padding-bottom: 0;
+
+    h2,
+    h1 {
+      border-bottom: 0;
+      border-top: rem(1px) solid $orange-2;
+      margin-top: 0;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.node-title-page-list {
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+
+  h2.node-title {
+    @include dinpro-condmedium;
+    border-top-style: none;
+    color: $blue-a7;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 20px;
+    padding-top: rem(40px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.messages {
+  display: none;
+  word-wrap: break-word;
+}
+
+.more-link {
+  text-align: center;
+
+  a {
+    @extend .icon-arrow-right;
+    @extend .read-more;
+    width: auto;
+
+    &:before {
+      @extend .icons-icomon;
+      margin-right: rem(7px);
+    }
+  }
+}
+
+.page-title {
+  @include dinpro-condmedium;
+  border-bottom: 1px solid $orange-2;
+  color: $blue-a7;
+  font-size: 2rem;
+  margin: rem(0 0 55px 0);
+  padding-bottom: rem(30px);
+  padding-top: rem(40px);
+  text-align: center;
+  text-transform: uppercase;
+
+  @include susy-media(tablet) {
+    margin: rem(0 0 55px);
+  }
+
+  @include susy-media(tablet-landscape) {
+    font-size: 2.4rem;
+    margin: rem(0 0 57px);
+  }
+}
+
+
+.hide-page-title {
+  .page-title {
+    display: none;
+  }
+}

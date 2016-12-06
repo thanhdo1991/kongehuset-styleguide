@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'kong';
+    src:    url('../fonts/kong.eot?5i8gcj');
+    src:    url('../fonts/kong.eot?5i8gcj#iefix') format('embedded-opentype'),
+        url('../fonts/kong.ttf?5i8gcj') format('truetype'),
+        url('../fonts/kong.woff?5i8gcj') format('woff'),
+        url('../fonts/kong.svg?5i8gcj#kong') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"],
+%icomoon {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'kong';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-volume-medium:before {
+    content: "\e90b";
+}
+.icon-cross:before {
+    content: "\e90a";
+}
+.icon-heart:before {
+    content: "\e908";
+}
+.icon-plus:before {
+    content: "\e909";
+}
+.icon-search2:before {
+    content: "\f002";
+}
+.icon-angle-up:before {
+    content: "\f106";
+}
+.icon-list:before {
+    content: "\e903";
+}
+.icon-hamber:before,
+.icon-dehaze:before {
+    content: "\e3c7";
+}
+.icon-keyboard_arrow_left:before {
+    content: "\e314";
+}
+.icon-keyboard_arrow_right:before {
+    content: "\e315";
+}
+.icon-keyboard_arrow_up:before {
+    content: "\e316";
+}
+.icon-instagram:before {
+    content: "\e905";
+}
+.icon-youtube:before {
+    content: "\e907";
+}
+.icon-facebook:before {
+    content: "\e906";
+}
+.icon-grid:before {
+    content: "\e904";
+}
+.icon-angle-down:before {
+    content: "\e902";
+}
+.icon-search:before {
+    content: "\e900";
+}
+.icon-arrow-right:before {
+    content: "\e901";
+}

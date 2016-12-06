@@ -1,0 +1,79 @@
+// STYLES-MAIN.SCSS
+
+// Please centralize all includes here.
+
+// WARNING: DO NOT EDIT /assets/css/styles.css file manually, this should be generated only by compiler based on this file.
+
+
+//Required imports
+@import '../.npm/bower_components/susy/sass/susy';
+@import '../.npm/bower_components/compass-sass-mixins/lib/compass';
+
+
+//Helpers
+@import 'helpers/functions';
+@import 'helpers/mixins';
+@import 'helpers/extends';
+
+
+// Reset
+@import 'base/reset';
+
+//Base
+@import 'base/variables';
+@import 'base/colors';
+@import 'base/fonts';
+@import 'base/grid';
+@import 'base/typography';
+@import 'base/table';
+@import 'base/form';
+@import 'base/iconmoon';
+
+//Helpers Class
+@import 'helpers/helper';
+@import 'helpers/animate';
+
+// Vendors
+@import 'vendors/bootstrap-select';
+@import 'vendors/slick';
+
+// Blocks
+@import 'blocks/block-example';
+@import 'blocks/index-links';
+@import 'blocks/box-hero';
+@import 'blocks/box-feature';
+@import 'blocks/box-image';
+@import 'blocks/box-grid-image';
+@import 'blocks/box-banner';
+@import 'blocks/box-list-media';
+@import 'blocks/box-user';
+@import 'blocks/box-list-content';
+@import 'blocks/box-grid-content';
+@import 'blocks/box-slide-gallery';
+@import 'blocks/box-slide-month';
+@import 'blocks/box-user-timeline';
+@import 'blocks/box-field-image';
+@import 'blocks/box-slide-calender';
+@import 'blocks/box-social-news';
+@import 'blocks/box-video';
+@import 'blocks/box-image-overlay';
+@import 'blocks/block-filter';
+@import 'blocks/block-paragraphs';
+@import 'blocks/box-image-two';
+@import 'blocks/royalline';
+@import 'blocks/list-search';
+@import 'blocks/box-contact';
+
+// Layouts
+@import 'layouts/layout';
+@import 'layouts/navigation';
+@import 'layouts/header';
+@import 'layouts/footer';
+
+// Plugin layout
+@import 'plugin/layouts/right-sidebar';
+@import 'plugin/layouts/one-column';
+@import 'plugin/layouts/default-template';
+
+// Pages
+@import 'pages/index';

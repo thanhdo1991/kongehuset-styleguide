@@ -1,0 +1,835 @@
+// Style component month slide.
+$box-slide-month-selector: '.box-slide-month';
+
+.box-slide-month {
+  background-color: $blue-c8;
+  box-shadow: rem(3px -3px 25px -1px) rgba($black, .03) inset;
+  float: none;
+  margin-bottom: rem(30px);
+  padding: rem(36px 20px 0);
+  width: 50%;
+
+  &__line {
+    border-bottom: rem(1px) solid $orange-1;
+  }
+
+  &__bigtitle {
+    color: $gray-66;
+    font-size: 1.6rem;
+    line-height: rem(26px);
+    margin: rem(0 0 28px);
+    padding: rem(0 10px 9px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #{$box-slide-month-selector}__bigtitle {
+    color: $gray-66;
+    font-size: 1.6rem;
+    line-height: rem(26px);
+    margin: rem(0 0 28px);
+    padding: rem(0 10px 9px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .block-month__content__item {
+    margin-bottom: rem(6px);
+  }
+
+  &__list {
+    padding-bottom: rem(36px);
+  }
+
+  &__date-month {
+    @include dinpro-condmedium;
+    color: $gray-66;
+    font-size: 1.8em;
+    margin-bottom: rem(6px);
+    margin-top: 0;
+    padding-bottom: rem(22px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__contnent {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  &__date {
+    @include dinpro-condmedium;
+    color: $orange;
+    font-size: rem(14.5px);
+    font-style: normal;
+    letter-spacing: rem(.5px);
+    padding-bottom: rem(5px);
+    padding-top: rem(20px);
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include  gotham-book;
+    color: $gray-55;
+    font-size: rem(15.5px);
+    font-weight: 400;
+    line-height: rem(23px);
+    margin-top: 0;
+
+    a {
+      @include  gotham-book;
+      color: $gray-55;
+    }
+  }
+
+  &__link {
+    padding-bottom: rem(30px);
+    text-align: center;
+  }
+
+  .slick {
+    &-prev,
+    &-next {
+      height: rem(25px);
+      margin-top: 0;
+      top: 0;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: none;
+      }
+
+      &:before,
+      &:after {
+        border-color: $blue-a7;
+        height: rem(14px);
+      }
+    }
+
+    &-prev {
+      left: 15.5%;
+      margin-left: -10px;
+      padding: 0;
+
+      &:before {
+        bottom: rem(-1px);
+
+        @include susy-media(tablet) {
+          bottom: 0;
+        }
+      }
+
+      &:after {
+        @include susy-media(tablet) {
+          top: rem(-1px);
+        }
+      }
+    }
+
+    &-next {
+      margin-right: -10px;
+      padding: 0;
+      right: 15.5%;
+
+      &:before {
+        bottom: rem(-1px);
+
+        @include susy-media(tablet) {
+          bottom: 0;
+        }
+      }
+
+      &:after {
+        @include susy-media(tablet) {
+          top: rem(-1px);
+        }
+      }
+    }
+
+    &-disabled {
+      display: none !important;
+    }
+  }
+}
+
+.box-slide-month--small {
+  padding: rem(21px 17px 0);
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .box-slide-month {
+    &__list {
+      padding-bottom: 0;
+      position: relative;
+    }
+
+    &__date-month {
+      font-size: 1.4rem;
+      letter-spacing: rem(1px);
+      margin-bottom: rem(25px);
+      padding: 0;
+    }
+
+    &__date {
+      font-size: 1rem;
+      letter-spacing: 0;
+      margin-bottom: rem(6px);
+      padding: 0;
+      text-align: center;
+    }
+
+    &__link {
+      margin-top: rem(10px);
+      padding-bottom: rem(20px);
+
+      @include susy-media(tablet) {
+        padding-bottom: rem(24px);
+      }
+
+      a {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .block-month__content__item {
+    text-align: center;
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: rem(-3px);
+    display: block !important;
+
+    @include susy-media(mobileOnly) {
+      margin-top: rem(-30px);
+      top: 50%;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+    margin-left: 0;
+  }
+
+  .slick-next {
+    margin-right: 0;
+    right: rem(-7px);
+  }
+
+  .slick-dots {
+    bottom: 10px;
+    display: none !important;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+}
+
+// Page Event.
+.section-event,
+.node-type-frontpage {
+  .page-title {
+    border: 0;
+    margin: 0 !important;
+    padding: rem(80px 0 10px) !important;
+
+    @include susy-media(mobileOnly) {
+      padding-top: 30px !important;
+    }
+  }
+
+  .pane-title {
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .view-header {
+    position: relative;
+
+    .date-nav-wrapper {
+      margin-top: 0;
+
+      .date-nav {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .date-heading {
+      border-bottom: rem(1px) solid $orange-1;
+      letter-spacing: rem(1px);
+      padding-bottom: rem(19px);
+      text-transform: uppercase;
+
+      h3 {
+        @include dinpro-condmedium;
+        color: $gray-66;
+        font-size: 1.8rem;
+      }
+    }
+
+    @extend %pager;
+
+    .pager {
+      li {
+        &:after,
+        &:before {
+          background: $gray-66;
+        }
+
+        &:hover {
+          &:after,
+          &:before {
+            background: $gray-99;
+          }
+        }
+      }
+    }
+  }
+
+  .pane-event-month {
+    .date-heading {
+      background-color: $blue-d3;
+      border-bottom: 0 !important;
+      padding: rem(33px 0 25px);
+    }
+
+    .date-prev,
+    .date-next {
+      top: rem(30px) !important;
+    }
+
+    .date-prev {
+      left: 28% !important;
+
+      @include susy-media(mobileSmallOnly) {
+        left: 0 !important;
+      }
+    }
+
+    .date-next {
+      right: 28% !important;
+
+      @include susy-media(mobileSmallOnly) {
+        right: 0 !important;
+      }
+    }
+
+    .view-content {
+      .views-row {
+        display: inline-block;
+        margin-bottom: rem(40px);
+        width: 100%;
+
+        &.views-row-last {
+          margin-bottom: 0;
+        }
+
+        .box-slide-month__date {
+          display: inline-block;
+          float: left;
+          line-height: rem(22px);
+          padding-right: rem(30px);
+          padding-top: 0;
+
+          @include susy-media(mobileSmallOnly) {
+            float: none;
+          }
+        }
+
+        .box-slide-month__title {
+          display: table-cell;
+        }
+      }
+    }
+  }
+}
+
+.panel-filter.panel-filter-form {
+  @include susy-media(mobileOnly) {
+    background-color: $blue-a7;
+    margin-top: 0 !important;
+    padding: rem(15px);
+    position: inherit;
+  }
+
+  .label-filter {
+    border-right: rem(.5px) solid rgba($blue-b6, .2);
+    color: $blue-b6;
+    font-size: 1.1rem;
+    padding: rem(10px 20px 10px 0);
+    text-transform: uppercase;
+    width: 100%;
+
+    @include susy-media(tabletOnlyDesktop) {
+      max-width: rem(100px);
+    }
+
+    @include susy-media(mobileOnly) {
+      color: $white;
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+
+  .label-filter,
+  .pane-content {
+    vertical-align: middle;
+
+    @include susy-media(mobileOnly) {
+      display: block;
+      max-width: 100%;
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  form {
+    background-color: $white;
+    margin-bottom: 0;
+    padding: 0;
+
+    @include susy-media(mobileOnly) {
+      background-color: transparent;
+    }
+
+    .form-wrapper {
+      margin: 0;
+
+      .form-type-select {
+        float: left;
+      }
+    }
+
+    .form-item {
+      margin: 0;
+
+      label {
+        display: none;
+      }
+    }
+
+    > div {
+      text-align: inherit;
+
+      @include susy-media(mobileOnly) {
+        max-width: 100%;
+
+        > div {
+          display: inline;
+        }
+
+        .form-item {
+          margin-bottom: rem(10px) !important;
+        }
+
+        .form-type-select {
+          float: none !important;
+          margin: 0 auto;
+          max-width: rem(320px);
+        }
+
+        .container-inline-date {
+          .form-type-date-select {
+            width: 100%;
+          }
+
+          .date-padding {
+            float: none;
+          }
+        }
+      }
+    }
+
+    .message {
+      display: none;
+    }
+
+    .form-type-select {
+      .dropdown-toggle {
+        border-right: rem(1px) solid rgba($blue-b6, .2);
+        margin-bottom: 0;
+
+        @include susy-media(mobileOnly) {
+          border-right: 0;
+          padding-right: rem(30px);
+          background-color: $white;
+        }
+
+        .filter-option {
+          color: $gray-88;
+          font-size: 1.1rem;
+        }
+
+        .icon-angle-down {
+          &:before {
+            color: $gray-88;
+          }
+        }
+      }
+
+      div.dropdown-menu {
+        border-top: 0 !important;
+        border: rem(.5px) solid rgba($blue-b6, .2) !important;
+        margin-left: 0;
+
+        .dropdown-menu {
+          text-transform: capitalize;
+
+          li {
+            a {
+              @include gotham-book;
+              color: $gray-66;
+              font-size: 0.9rem;
+              font-weight: normal;
+
+              .text {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pane-group-event {
+  display: table;
+  width: 100%;
+}
+
+.pane-calendar-event-month {
+  background-color: rgba($blue-c8, .8);
+  display: table-cell;
+  padding: rem(20px);
+  width: 50%;
+
+  @include susy-media(tablet) {
+    padding: rem(33px 20px 20px);
+  }
+
+  > .pane-content {
+    @include susy-media(tablet) {
+      min-height: rem(400px);
+    }
+
+    @include susy-media(tablet-landscape) {
+      min-height: rem(560px);
+    }
+  }
+
+  @include susy-media(mobileOnly) {
+    display: block;
+    width: 100%;
+  }
+
+  .view-content {
+    padding-bottom: rem(0);
+    padding-top: rem(13px);
+
+    table {
+      thead {
+        tr {
+          background-color: transparent;
+
+          th {
+            @include dinpro-condmedium;
+            background-color: transparent;
+            border: 0;
+            color: $orange-1;
+            font-size: 1.1rem;
+            font-weight: normal;
+            text-transform: uppercase;
+            padding: rem(12px 0);
+
+            @include susy-media(tablet-landscape) {
+              padding: rem(12px 15px);
+            }
+
+            @include susy-media(desktop) {
+              padding: rem(15px);
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          background-color: transparent;
+
+          td {
+            @include jeles-regularregular;
+            background-color: transparent !important;
+            border: 1px solid $white;
+            font-size: 1.2rem;
+            padding: rem(4px);
+
+            @include susy-media(tablet-landscape) {
+              font-size: 1.6rem;
+            }
+
+            @include susy-media(desktop) {
+              font-size: rem(24px);
+            }
+
+            a {
+              color: $blue;
+              text-decoration: none;
+            }
+
+            &.empty {
+              border: 0;
+            }
+
+            &.has-events {
+              .month {
+                background-color: $white;
+                padding: 0;
+
+                &:hover {
+                  background-color: rgba($blue, .3);
+                  color: $white;
+
+                  a {
+                    color: $white;
+                    opacity: 1;
+                  }
+                }
+
+                a {
+                  display: block;
+                  padding: rem(20px 10px 10px);
+
+                  @include susy-media(tabletOnlyDesktop) {
+                    padding: rem(15px 5px 5px);
+                  }
+
+                  @include susy-media(mobileOnlyLarge) {
+                    padding: rem(9px 0 3px);
+                  }
+
+                  @include susy-media(mobileSmallOnly) {
+                    padding: rem(6px 0 0);
+                  }
+                }
+              }
+            }
+
+            .month {
+              color: $blue;
+              padding: rem(20px 10px 10px);
+              text-align: center;
+
+              @include susy-media(tabletOnlyDesktop) {
+                padding: rem(15px 6px 5px);
+              }
+
+              @include susy-media(mobileOnlyLarge) {
+                padding: rem(9px 0 3px);
+              }
+
+              @include susy-media(mobileSmallOnly) {
+                padding: rem(6px 0 0);
+              }
+
+              &.has-birthday {
+                position: relative;
+
+                &:before {
+                  background: url('../images/flag-split.svg') no-repeat;
+                  background-size: 100%;
+                  bottom: 0;
+                  content: "";
+                  height: rem(10px);
+                  position: absolute;
+                  right: 0;
+                  width: rem(15px);
+                }
+              }
+            }
+
+            &.day-selected {
+              .month {
+                background-color: $orange-1;
+
+                a {
+                  color: $white;
+                }
+              }
+            }
+
+            &.today {
+              &.today-bg {
+                .month {
+                  background-color: transparent;
+                  color: $blue;
+
+                  a {
+                    background-color: $white;
+                    color: $blue;
+
+                    &:hover {
+                      background-color: $blue-d3;
+                      color: $white;
+                    }
+                  }
+                }
+
+                &.day-selected {
+                  .month {
+                    background-color: transparent;
+
+                    a {
+                      background-color: $orange-1;
+                      color: $white;
+                    }
+                  }
+                }
+              }
+
+              .month {
+                background-color: $orange-1;
+                color: $white;
+
+                a {
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.pane-calendar-event-day {
+  background-color: $blue-c8;
+  display: table-cell;
+  padding: rem(33px 20px);
+  width: 50%;
+
+  @include susy-media(mobileOnly) {
+    display: block;
+    padding: rem(20px);
+    width: 100%;
+  }
+
+  .view-content {
+    padding: rem(20px 0);
+    text-align: left;
+
+    @include susy-media(tablet) {
+      padding: rem(26px 20px 0);
+    }
+
+    @include susy-media(tablet-landscape) {
+      padding: rem(26px 53px 0);
+    }
+
+    .views-row {
+      margin-bottom: rem(25px);
+
+      .box-slide-month__date {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.pane-kon-event-page-kon-calendar {
+  overflow: hidden;
+  text-align: center;
+}
+
+.switch-to-calendar-list,
+.switch-to-calendar-mini {
+  @include dinpro-condmedium;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  width: auto;
+
+  i {
+    font-size: rem(20px);
+    padding: rem(0 5px);
+  }
+}
+
+.wrap-read-more {
+  margin-bottom: rem(30px);
+  margin-top: rem(28px);
+  padding: rem(0 0 20px);
+
+  &.no-margin {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .read-more {
+    font-size: 1.4rem;
+    width: auto;
+  }
+}
+
+.wrap-switch-calender {
+  display: none;
+  padding: rem(30px 0 15px);
+
+  &.is-show {
+    display: block;
+  }
+}
+
+.switch-to-calendar-mini {
+  display: inline-block;
+  padding: 0;
+  width: auto;
+
+  i {
+    padding: rem(4px 15px);
+    position: relative;
+
+    &:before {
+      font-size: rem(30px);
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
+.pane-event-month {
+  margin: 0 auto;
+  width: 100%;
+
+  @include susy-media(tablet-landscape) {
+    max-width: 76%;
+  }
+
+  .view-content {
+    background-color: rgba($blue-d3, .2);
+    padding: rem(30px 10px);
+    text-align: left;
+
+    @include susy-media(tablet) {
+      padding: rem(26px 20px 0);
+    }
+
+    @include susy-media(tablet-landscape) {
+      padding: rem(45px 40px);
+    }
+  }
+}
+
+.views-row.show {
+  display: block !important;
+}

@@ -1,0 +1,204 @@
+// Box banner.
+.box-banner {
+  @include susy-media(tablet) {
+    margin-bottom: rem(20px);
+  }
+
+  &__image {
+    height: rem(300px);
+    line-height: 0;
+    overflow: hidden;
+    text-align: center;
+
+    @include susy-media(desktop) {
+      background-attachment: fixed;
+      background-position: center rem(48px);
+      background-repeat: no-repeat;
+      height: rem(550px);
+      margin: 0 auto;
+      max-width: rem(1140px);
+      width: 100%;
+    }
+
+    @include susy-media(mobileDesktopOnly) {
+      background-attachment: inherit !important;
+      background-image: none !important;
+      height: auto !important;
+    }
+
+    img {
+      height: auto;
+      margin-bottom: 0;
+      width: 100%;
+
+      @include susy-media(desktop) {
+        max-width: inherit;
+        visibility: hidden;
+        width: auto;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(15px);
+    margin-top: -40px;
+    padding: 0 10px;
+    text-align: center;
+
+    @include susy-media(mobileLandscape) {
+      margin-top: -40px;
+      padding: 0 10px;
+    }
+
+    @include susy-media(tablet) {
+      margin-bottom: rem(30px);
+    }
+
+    .title-heading,
+    .pane-content {
+      @include jeles-regularregular;
+      background: $white;
+      box-shadow: rem(0 0 10px 0) rgba($black, .1);
+      color: $gray-66;
+      font-size: rem(25px);
+      margin: 0 auto;
+      padding: rem(20px);
+      position: relative;
+
+      @include susy-media(mobileLandscape) {
+        font-size: rem(35px);
+        line-height: 55px;
+      }
+
+      @include susy-media(tablet) {
+        font-size: 2.9rem;
+        margin-bottom: 0;
+        padding: rem(41px 50px 15px);
+        width: 74%;
+      }
+
+      &:before {
+        background: $white;
+        bottom: -10px;
+        content: '';
+        height: 10px;
+        left: 0;
+        position: absolute;
+        right: 0;
+      }
+
+      h2,
+      > div {
+        @include jeles-regularregular;
+        color: $gray-66;
+        font-size: rem(25px);
+        margin: 0;
+
+        @include susy-media(mobileLandscape) {
+          font-size: rem(35px);
+          line-height: 55px;
+        }
+
+        @include susy-media(tablet) {
+          font-size: rem(42px);
+        }
+      }
+    }
+  }
+
+  &.box-banner-only-img {
+    .box-banner {
+      &__image {
+        background-repeat: no-repeat;
+
+        @include susy-media(desktop) {
+          height: rem(600px);
+        }
+
+        @include susy-media(mobileDesktopOnly) {
+          background-image: none !important;
+          height: auto !important;
+        }
+
+        img {
+          width: auto;
+
+          @include susy-media(mobileDesktopOnly) {
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .one-column-middle {
+    margin-bottom: 0;
+    width: 100%;
+  }
+}
+
+.landscape {
+  .box-banner__title {
+    .pane-content,
+    .title-heading {
+      margin-left: auto;
+      margin-right: auto;
+
+      @include susy-media(tablet-landscape) {
+        max-width: rem(845px);
+        width: 100%;
+      }
+    }
+  }
+}
+
+.portrait {
+  .box-banner__title {
+    .pane-content,
+    .title-heading {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: rem(15px);
+      padding-right: rem(15px);
+
+      @include susy-media(tablet-landscape) {
+        max-width: 600px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Section page.
+.node-type-section {
+  .box-banner__image {
+    background-size: cover !important;
+    height: rem(580px);
+    max-width: inherit;
+
+    @include susy-media(desktop-wide) {
+      height: rem(700px);
+    }
+
+    @include susy-media(desktop-superwide) {
+      height: rem(790px);
+    }
+  }
+
+  .box-banner {
+    .copyprevention-transparent-gif {
+      display: none;
+    }
+  }
+}
+
+.page-has-subholder {
+  .box-banner {
+    &__image {
+      @include susy-media(desktop) {
+        background-position: center rem(98px);
+      }
+    }
+  }
+}

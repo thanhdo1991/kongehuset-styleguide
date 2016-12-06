@@ -1,0 +1,76 @@
+.node-type-video {
+  overflow-x: hidden;
+}
+
+.box-video {
+  @include clearfix;
+  padding: rem(0 6px);
+
+  &__item {
+    margin-bottom: rem(30px);
+    vertical-align: top;
+
+    @include susy-media(mobileLandscape) {
+      @include gallery(2 of $susy);
+      margin-bottom: rem(45px);
+    }
+
+    @include susy-media(tablet) {
+      @include gallery(4 of $susy-tablet);
+      margin-bottom: rem(45px);
+    }
+
+    @include susy-media(tablet-landscape) {
+      @include gallery(3 of $susy-desktop);
+      padding: rem(0 13px);
+      width: 24.3%;
+    }
+
+    &:after {
+      border-bottom: rem(1px) solid rgba(167, 184, 182, .44);
+      content: '';
+      display: block;
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__video {
+    line-height: 0;
+    margin-bottom: rem(16px);
+  }
+
+  &__type {
+    @include dinpro-condmedium;
+    color: $orange;
+    font-size: 1.05rem;
+    font-style: normal;
+    letter-spacing: rem(.5px);
+    margin-bottom: rem(5px);
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    @include gotham-book;
+    color: $gray-55;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: rem(23px);
+    margin-bottom: rem(20px);
+    margin-top: 0;
+
+    @include susy-media(tablet) {
+      margin-bottom: rem(30px);
+    }
+
+    a {
+      color: $gray-55;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,147 @@
+// Susy grid.
+$debug: false; // Set true to show the grid.
+$show-image: 'hide';
+
+@if $debug == false {
+  $show-image: 'hide';
+} @else {
+  $show-image: 'show';
+}
+
+// Grid definition for all breakpoints. Use http://gridcalculator.dk/#/1200/12/52/20 to generate the grid.
+$susy: (
+  flow: ltr,
+  math: fluid,
+  container-position: rem($container-margin),
+  container: auto,
+  columns: $column-mobile,
+  gutters: 5px / 44px,
+  column-width: false,
+  debug: (
+    image: $show-image,
+    color: rgba($black, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+
+$susy-tablet: (
+  container-position: rem($container-margin),
+  container: auto,
+  columns: $column-tablet,
+  gutters: 10px / 59px,
+  column-width: false,
+  debug: (
+    image: $show-image,
+    color: rgba($gray, .25),
+    output: background,
+    toggle: top right,
+  ),
+);
+
+$susy-desktop: (
+  columns: $column-desktop,
+  gutters: 10px / 85px,
+  container-position: auto,
+  container: rem($desktop),
+  debug: (
+    image: $show-image,
+    color: rgba($silver, .25),
+    output: background,
+    toggle: top right,
+  ),
+);
+
+// Pick specific breakpoint.
+$susy-media: (
+  // max-width: 479px
+  mobileSmallOnly: (
+    media: all,
+    max-width: 479px,
+  ),
+
+  // max-width: 767px
+  mobileOnly: (
+    media: all,
+    max-width: 767px,
+  ),
+
+  // min-width: 479px and max-width: 767px
+  mobileOnlyLarge: (
+    media: all,
+    min-width: $mobile-landscape,
+    max-width: $tablet - 1px,
+  ),
+
+
+  // max-width: 992px
+  mobileTabletOnly: (
+    media: all,
+    max-width: $tablet-landscape - 1,
+  ),
+
+  // max-width: 1999px
+  mobileDesktopOnly: (
+    media: all,
+    max-width: $desktop - 1,
+  ),
+  // max-width: 1366px
+  mobileSubperdesktop: (
+    media: all,
+    max-width: $subperdesktop,
+  ),
+
+  // min-width: 480px
+  mobileLandscape: $mobile-landscape,
+
+  // min-width:500px
+  mobileLandscape-more: $mobile-landscape-large,
+
+  // min-width: 768px and max-width: 1999px
+  tabletOnly: (
+    media: all,
+    min-width: rem($tablet),
+    max-width: $desktop,
+  ),
+ // min-width: 768px and max-width: 1178px
+  desktopfixfeature: (
+    media: all,
+    min-width: rem($tablet),
+    max-width: $desktop-fixfeature,
+  ),
+
+  // min-width: 768px and max-width: 992px
+  tabletOnlyDesktop: (
+    media: all,
+    min-width: $tablet,
+    max-width: $tablet-landscape,
+  ),
+
+  // min-width: 768px
+  tablet: $tablet,
+
+  // min-width: 992px
+  tablet-landscape: $tablet-landscape,
+
+  // min-width: 1140px
+  desktop: $desktop,
+
+  // min-width: 1280px
+  desktop-wide: $desktop-wide,
+
+  // min-width: 1440px
+  desktop-superwide: $desktop-superwide,
+);
+
+
+.container {
+  @include container();
+
+  @include susy-media(tablet) {
+    @include container($susy-tablet);
+  }
+
+  @include susy-media(desktop) {
+    @include container($susy-desktop);
+  }
+}

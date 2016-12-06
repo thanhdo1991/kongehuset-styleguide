@@ -1,0 +1,10 @@
+// Layout style
+.main-content {
+  .container {
+    @include susy-media(mobileTabletOnly) {
+      .container {
+        margin: 0;
+      }
+    }
+  }
+}

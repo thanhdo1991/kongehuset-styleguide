@@ -1,0 +1,152 @@
+// Image two.
+.box-two-image {
+  margin-bottom: rem(50px);
+  overflow: hidden;
+
+  &__item {
+    @include susy-media(tablet) {
+      float: left;
+      padding: 0 rem(5px);
+    }
+  }
+
+  &__left {
+    @include susy-media(tablet) {
+      width: 41.65%;
+    }
+  }
+
+  &__right {
+    @include susy-media(tablet) {
+      width: 58.35%;
+    }
+  }
+
+  &__image {
+    @include dinpro-condmedium;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $gray-99;
+    font-size: .9rem;
+    letter-spacing: .07143rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+    img {
+      width: 100%;
+
+      @include susy-media(tablet) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      display: block;
+    }
+
+    @include susy-media(tablet) {
+      height: rem(500px);
+      line-height: 0;
+      overflow: hidden;
+      padding: .71429rem;
+      position: relative;
+    }
+  }
+
+  &__content {
+    @include jeles-regularregular;
+    background: $white;
+    box-shadow: 0 rem(-5px) rem(6px) 0 rgba(0, 0, 0, .1);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: rem(-40px);
+    padding: rem(15px) rem(10px) .35714rem;
+    position: relative;
+    text-align: center;
+    width: 95%;
+
+    @include susy-media(tablet-landscape) {
+      padding: 1.78571rem 2.5rem .35714rem;
+    }
+
+    @include susy-media(tablet-landscape) {
+      width: 73.33%;
+    }
+  }
+
+  &__date {
+    color: $orange;
+    margin-bottom: rem(5px);
+  }
+
+  &__title {
+    color: $gray-66;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: .71429rem;
+
+    @include susy-media(tablet-landscape) {
+      font-size: 1.8rem;
+      line-height: 2.78571rem;
+    }
+
+    a {
+      color: $gray-66;
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1.5;
+      margin-bottom: .71429rem;
+
+      @include susy-media(tablet-landscape) {
+        font-size: 1.8rem;
+        line-height: 2.78571rem;
+      }
+
+      &:hover {
+        color: $gray-99;
+      }
+    }
+  }
+
+  .date-display-single {
+    @include dinpro-condmedium;
+    color: $orange;
+    font-size: 1.05rem;
+    letter-spacing: rem(.5px);
+    margin-bottom: rem(15px);
+    padding-top: rem(20px);
+    text-transform: uppercase;
+  }
+
+  // Layout 1/3;
+  &--1-3 {
+    .box-two-image {
+      &__left {
+        @include susy-media(tablet) {
+          width: 33.3%;
+        }
+
+        .box-two-image {
+          &__image {
+            overflow: hidden;
+
+            @include susy-media(mobileOnly) {
+              height: rem(400px);
+            }
+
+            @include susy-media(mobileSmallOnly) {
+              height: rem(300px);
+            }
+          }
+        }
+      }
+
+      &__right {
+        @include susy-media(tablet) {
+          width: 66.7%;
+        }
+      }
+    }
+  }
+}

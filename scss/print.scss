@@ -1,0 +1,51 @@
+
+/* Import print file */
+
+@import 'print-nhung';
+@import 'print-phu';
+@import 'print-components';
+
+/* Disable block on print */
+
+.header,
+.footer,
+.open-menu,
+.pane-subholder,
+.submenholder,
+#navbar-administration,
+.sidebar-right,
+#sliding-popup {
+	display: none !important;
+}
+
+body {
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+/*================================
+=            Sitewide            =
+================================*/
+
+.right-sidebar-wrapper .two-column {
+	// .content__left {
+	//   float: left;
+	//   margin-bottom: 0;
+	//   padding-left: 0px;
+	//   padding-right: 2.85714rem;
+	//   text-align: left;
+	//   width: 66.68%;
+	// }
+
+ //  .sidebar-right {
+ //    float: left;
+ //    margin-bottom: 0;
+ //    padding-left: 1.07143rem;
+ //    padding-right: 1.07143rem;
+ //    width: 33.32%;
+	// }
+}
+
+
+
+
+/*=====  End of Sitewide  ======*/

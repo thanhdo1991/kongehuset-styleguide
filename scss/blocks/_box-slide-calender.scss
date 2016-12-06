@@ -1,0 +1,216 @@
+// Style calender
+.box-slide-calender {
+  background-color: rgba(200, 210, 210, .8);
+  padding: rem(10px);
+  text-align: center;
+
+  @include susy-media(tablet) {
+    padding: rem(20px);
+    width: 50%;
+  }
+
+  .ui-datepicker-inline {
+    background-color: transparent;
+    border: 0;
+    transition: transform 500ms ease-in 0s;
+    width: 999em !important;
+  }
+
+  .hasDatepicker {
+    overflow: hidden;
+    position: relative;
+
+
+    .ui-datepicker {
+      &-calendar {
+        margin: 0;
+        padding-top: rem(3px);
+        width: 99%;
+
+        thead th {
+          font-size: 1.1rem;
+          padding-bottom: rem(15px);
+        }
+      }
+
+      &-header {
+        background: transparent;
+        border: 0;
+      }
+
+      &-title {
+        @include dinpro-condmedium;
+        border-bottom: rem(1px) solid $orange-1;
+        color: $gray-66;
+        font-family: 'Dinpro_condmedium',Helvetica,Arial,sans-serif;
+        font-size: rem(24px);
+        font-weight: 100;
+        margin-bottom: rem(15px);
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: rem(12px);
+        padding-top: rem(1px);
+        text-transform: uppercase;
+      }
+
+      th {
+        @include dinpro-condmedium;
+        color: $orange-1;
+        font-size: rem(16px);
+        font-weight: normal;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      td {
+        border: rem(1px) solid $white;
+        padding: rem(2px);
+
+        @include susy-media(tablet) {
+          padding: rem(4px);
+        }
+
+        span,
+        a {
+          @include jeles-regularregular;
+          background-color: transparent;
+          border: 0;
+          color: $blue-a7;
+          display: block;
+          font-size: rem(14px);
+          font-weight: 400;
+          line-height: 0;
+          padding: rem(15px 0 10px);
+          text-align: center;
+          text-decoration: none;
+
+          @include susy-media(mobileLandscape) {
+            font-size: rem(18px);
+            padding: rem(25px 14px 18px);
+          }
+
+          @include susy-media(tablet) {
+            font-size: rem(24px);
+            padding: rem(40px 17px 29px 18px);
+          }
+
+          &.ui-state-active {
+            background: $orange-1;
+            color: $white;
+          }
+
+          &.pretend-active {
+            background: $white;
+
+            &:hover {
+              background-color: rgba(167, 184, 182, .74);
+              opacity: 1;
+            }
+          }
+
+          &.flag-active {
+            position: relative;
+
+            &:before {
+              background: rgba(0, 0, 0, 0) url('../images/flag-split.svg') repeat scroll 0 0;
+              background-size: 100%;
+              bottom: 0;
+              content: '';
+              height: rem(12px);
+              position: absolute;
+              right: 0;
+              width: rem(20px);
+            }
+          }
+        }
+
+        &.ui-state-disabled {
+          border: 0;
+        }
+      }
+
+      tbody tr {
+        background: transparent;
+      }
+    }
+
+     // Style control
+    .next,
+    .prev {
+      @include transform(rotate(0));
+      -sand-transform: rotate(0);
+      cursor: pointer;
+      height: rem(15px);
+      left: 20%;
+      position: absolute;
+      top: rem(15px);
+      width: rem(15px);
+      z-index: 1;
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+
+    .prev,
+    .next {
+      &:before {
+        @include transform(rotate(-30deg));
+        -sand-transform: rotate(-30deg);
+        border-left: rem(1px) solid $blue-a7;
+        bottom: rem(-5px);
+        content: '';
+        display: inline-block;
+        height: rem(15px);
+        left: 0;
+        position: absolute;
+        width: rem(15px);
+      }
+
+      &:after {
+        @include transform(rotate(-60deg));
+        -sand-transform: rotate(-60deg);
+        border-top: rem(1px) solid $blue-a7;
+        content: '';
+        display: inline-block;
+        height: rem(15px);
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: rem(15px);
+      }
+    }
+
+    .next {
+      left: auto;
+      margin-right: rem(-3px);
+      right: 17%;
+
+      &:before {
+        @include transform(rotate(30deg));
+        -sand-transform: rotate(30deg);
+        bottom: rem(-12px);
+        left: auto;
+        right: rem(-8px);
+      }
+
+      &:after {
+        @include transform(rotate(60deg));
+        -sand-transform: rotate(60deg);
+        left: auto;
+        right: rem(4px);
+      }
+    }
+
+    .ui-datepicker {
+      &-prev,
+      &-next {
+        display: none;
+      }
+    }
+  }
+}
+
+.pane-kon-event-page-kon-calendar {
+  margin-bottom: 47px;
+}

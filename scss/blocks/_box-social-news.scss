@@ -1,0 +1,224 @@
+@include susy-media(mobileTabletOnly) {
+  .box-social-news {
+    display: none;
+  }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  0%   {right: rem(-400px);}
+  30%  {right: rem(-390px);}
+  35%  {right: rem(-380px);}
+  40%  {right: rem(-370px);}
+  100% {right: 0;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0%   {right: rem(-400px);}
+  30%  {right: rem(-390px);}
+  35%  {right: rem(-380px);}
+  40%  {right: rem(-370px);}
+  100% {right: 0;}
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes myback {
+  0%   {right: 0;}
+  30%  {right: rem(-10px);}
+  40%  {right: rem(-20px);}
+  50%  {right: rem(-30px);}
+  100% {right: rem(-400px);}
+}
+
+/* Standard syntax */
+@keyframes myback {
+  0%   {right: 0;}
+  30%  {right: rem(-10px);}
+  40%  {right: rem(-20px);}
+  50%  {right: rem(-30px);}
+  100% {right: rem(-400px);}
+}
+
+.box-social-news {
+  @include box-shadow(rem(0 0 8px 0) rgba($black, .1));
+  bottom: 0;
+  // box-shadow: rem(0 0 8px 0) rgba($black, .1);
+  // -webkit-box-shadow: rem(0 0 8px 0) rgba($black, .1);
+  // -ms-box-shadow: rem(0 0 8px 0) rgba($black, .1);
+  float: right;
+  height: 100%;
+  padding: rem(20px);
+  position: fixed;
+  right: rem(-400px);
+  top: 0;
+  width: 400px;
+  z-index: 999;
+
+  &.hide {
+    -webkit-animation: myback .5s; /* Chrome, Safari, Opera */
+    animation: myback .5s;
+  }
+
+  &.active {
+    -webkit-animation: mymove .5s; /* Chrome, Safari, Opera */
+    animation: mymove .5s;
+    right: 0;
+  }
+
+  &--instagram {
+    background: $orange-1;
+    z-index: 9999;
+
+    i {
+      @extend .icon-instagram;
+      background: $orange-1;
+      top: rem(170px);
+    }
+
+    .box-social-news__title {
+      h3 {
+        @extend .icon-instagram;
+      }
+    }
+  }
+
+  &--facebook {
+    background: $blue-a7;
+
+    i {
+      @extend .icon-facebook;
+      background: $blue-a7;
+      padding-left: rem(15px) !important;
+      top: rem(320px);
+
+      &:before {
+        left: rem(23px) !important;
+      }
+    }
+  }
+
+  i {
+    @include dinpro-condmedium;
+    @include transform(rotate(90deg));
+    -sand-transform: rotate(90deg);
+    box-shadow: rem(0 0 12px 0) rgba($black, .23);
+    color: $white;
+    cursor: pointer;
+    font-size: rem(14px);
+    font-style: normal;
+    font-weight: 400;
+    height: rem(40px);
+    left: rem(-95px);
+    letter-spacing: rem(1px);
+    line-height: rem(40px);
+    padding-left: rem(22px);
+    position: absolute;
+    right: auto;
+    text-align: center;
+    text-transform: uppercase;
+    width: rem(150px);
+
+    &:before {
+      @include transform(rotate(-90deg));
+      -sand-transform: rotate(-90deg);
+      font-family: kong;
+      font-size: rem(13px);
+      left: rem(19px);
+      position: absolute;
+    }
+  }
+
+  &__title {
+    padding: rem(8px 10px 18px 0);
+    text-align: center;
+
+    h3 {
+      @extend .icon-facebook;
+      color: $white;
+      display: inline-block;
+      font-size: 1.5rem;
+      margin: rem(0 0 0 -7px);
+      text-transform: uppercase;
+
+      &:before {
+        float: right;
+        font-family: kong;
+        font-size: rem(20px);
+        margin-left: rem(14px);
+      }
+    }
+  }
+
+  &__content {
+    background-color: $white;
+    height: 100%;
+    overflow-y: auto;
+    padding: rem(10px);
+  }
+
+  &__item {
+    background-color: $white;
+    box-shadow: rem(0 0 8px 0) rgba($black, .15);
+    height: auto;
+    margin-bottom: rem(55px);
+    padding: rem(15px);
+    width: 100%;
+
+    &:last-child {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__image {
+    line-height: 0;
+    margin-bottom: rem(9px);
+
+    a {
+      float: none !important;
+      width: 100%;
+    }
+  }
+
+  &__like {
+    @extend .icon-heart;
+    color: $gray-66;
+    line-height: rem(20px);
+
+    &:before {
+      font-family: kong;
+      margin-right: rem(5px);
+    }
+  }
+
+  &__body {
+    @include gotham-book;
+
+    p {
+      font-size: rem(14px);
+      line-height: rem(20px);
+      margin-bottom: 0;
+    }
+
+    span {
+      @include gotham;
+    }
+  }
+
+  &__content {
+    iframe {
+      height: 100% !important;
+      min-height: 100%;
+    }
+  }
+}
+
+.box-social-news--instagram.active i::after {
+  bottom: 0;
+  content: '';
+  height: 2.85714rem;
+  position: absolute;
+  right: -10.7143rem;
+  width: 10.7143rem;
+  z-index: 9;
+}

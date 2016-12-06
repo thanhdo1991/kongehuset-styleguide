@@ -1,0 +1,27 @@
+// Layout style
+.one-column-middle {
+  margin: 0 auto rem(20px);
+
+  @include susy-media(tablet) {
+    margin: 0 auto rem(65px);
+    width: 90%;
+  }
+
+  @include susy-media(tablet-landscape) {
+    width: 69%;
+  }
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.one-column-wrapper {
+  .container {
+    @include susy-media(mobileTabletOnly) {
+      .container {
+        margin: 0;
+      }
+    }
+  }
+}

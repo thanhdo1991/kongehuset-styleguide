@@ -1,0 +1,52 @@
+{
+  "site_title": "FFWvn Styleguide",
+  "img_path": "images-demo/",
+  "project_path":"https://propeople-us.atlassian.net/browse/",
+  "list_groups": [
+    {
+      "name":"basic",
+      "title": "Basic Elements"
+    },
+    {
+      "name":"helper",
+      "title":"Helper Classes"
+    },
+    {
+      "name":"component",
+      "title":"Components"
+    }
+  ],
+  "list_components":[
+    {
+      "id":"ST-01",
+      "name":"headings",
+      "group":"basic",
+      "hidecode":true
+    },
+    {
+      "id":"ST-02",
+      "name":"paragraphs",
+      "group":"basic"
+    },
+    {
+      "id":"ST-03",
+      "name":"links",
+      "group":"basic"
+    },
+    {
+      "id":"ST-04",
+      "name":"form",
+      "group":"basic"
+    },
+    {
+      "id":"ST-08",
+      "name":"background",
+      "group":"helper"
+    },
+    {
+      "id":"ST-09",
+      "name":"button",
+      "group":"helper"
+    }
+  ]
+}

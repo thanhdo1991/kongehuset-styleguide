@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>FFWvn Styleguide -</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shCore.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/styles/shThemeDefault.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+  <h1></h1>
+
+  <div class="component--item" id="headings">
+    <h2 class="component--title">headings</h2>
+    <div class="component--demo">
+      <div class="container">
+        <h1>H1 | Jeles regular | 38px</h1>
+        <h2>H2 | Dinpro condmedium | 32px</h2>
+        <h3>H3 | Dinpro condmedium | 24px</h3>
+        <h4>H4 | Dinpro condmedium | 18px</h4>
+        <h5>H5 | Dinpro condmedium | 14px</h5>
+        <h6>H6 | Dinpro condmedium | 12px</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="component--item" id="paragraphs">
+    <h2 class="component--title">paragraphs</h2>
+    <div class="component--demo">
+      <div class="container">
+        <h4>P1 | Gotham book | 16.8px</h4>
+        <p>Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis
+          quam quam. Nunc congue felis id augue varius, non facilisis arcu scelerisque. Proin molestie nibh sapien, in varius lacus malesuada a. Proin sit amet velit nunc. Etiam luctus est libero, euismod bibendum turpis semper dignissim. Aenean hendrerit
+          semper mattis. Sed rutrum tempus elementum. Cras bibendum malesuada tristique.</p>
+      </div>
+    </div>
+    <div class="container">
+      <button class="show-code">Show/Hide Code</button>
+      <div class="component--source element-invisible">
+        <div class="component--html">
+          <h4 class="component--source--title">Markup</h4>
+          <pre class="brush: php"><div class="container">
+  <h4>P1 | Gotham book | 16.8px</h4>
+  <p>Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam. Nunc congue felis id augue varius, non facilisis arcu scelerisque. Proin molestie nibh sapien, in varius lacus malesuada a. Proin sit amet velit nunc. Etiam luctus est libero, euismod bibendum turpis semper dignissim. Aenean hendrerit semper mattis. Sed rutrum tempus elementum. Cras bibendum malesuada tristique. </p>
+</div>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component--item" id="links">
+    <h2 class="component--title">links</h2>
+    <div class="component--demo">
+      <div class="container">
+        <p><a href="#A1">Link style A1. This is default link.</a>
+        </p>
+        <p><a class="read-more" href="#A2">Link style A2.</a>
+        </p>
+        <p><a class="read-more--small" href="#A3">Link style A3.</a>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <button class="show-code">Show/Hide Code</button>
+      <div class="component--source element-invisible">
+        <div class="component--html">
+          <h4 class="component--source--title">Markup</h4>
+          <pre class="brush: php"><div class="container">
+  <p><a href="#A1">Link style A1. This is default link.</a></p>
+  <p><a class="read-more" href="#A2">Link style A2.</a></p>
+  <p><a class="read-more--small" href="#A3">Link style A3.</a></p>
+</div>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component--item" id="form">
+    <h2 class="component--title">form</h2>
+    <div class="component--demo">
+      <div class="container">
+        <form>
+          <div class="form-type-textfield">
+            <label>Text input label</label>
+            <input type="text" maxlength="60" size="60" class="form-text">
+          </div>
+          <div class="form-item form-type-textfield form-item-name">
+            <label>Text input error</label>
+            <input type="text" maxlength="60" size="60" class="form-text error">
+          </div>
+          <div class="form-type-textfield">
+            <label>Text input success</label>
+            <input type="text" maxlength="60" size="60" class="form-text success">
+          </div>
+          <div class="form-type-textarea">
+            <label>Test textarea</label>
+            <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+              <textarea class="form-textarea" rows="5" cols="60"></textarea>
+            </div>
+          </div>
+          <div class="form-actions">
+            <input type="submit" class="form-submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="container">
+      <button class="show-code">Show/Hide Code</button>
+      <div class="component--source element-invisible">
+        <div class="component--html">
+          <h4 class="component--source--title">Markup</h4>
+          <pre class="brush: php"><div class="container">
+  <form>
+    <div class="form-type-textfield">
+      <label>Text input label</label>
+      <input type="text" maxlength="60" size="60" class="form-text">
+    </div>
+    <div class="form-item form-type-textfield form-item-name">
+      <label>Text input error</label>
+      <input type="text" maxlength="60" size="60" class="form-text error">
+    </div>
+    <div class="form-type-textfield">
+      <label>Text input success</label>
+      <input type="text" maxlength="60" size="60" class="form-text success">
+    </div>
+    <div class="form-type-textarea">
+      <label>Test textarea</label>
+      <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+        <textarea class="form-textarea" rows="5" cols="60"></textarea>
+      </div>
+    </div>
+    <div class="form-actions">
+      <input type="submit" class="form-submit" value="Submit">
+    </div>
+  </form>
+</div>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component--item" id="background">
+    <h2 class="component--title">background</h2>
+    <div class="component--demo">
+      <div class="container">
+        <div class="bg--white">
+          <p>Class: bg--white, #FFFFFF = White</p>
+          <p>Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis
+            quam quam. Nunc congue felis id augue varius, non facilisis arcu scelerisque. Proin molestie nibh sapien, in varius lacus malesuada a.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <button class="show-code">Show/Hide Code</button>
+      <div class="component--source element-invisible">
+        <div class="component--html">
+          <h4 class="component--source--title">Markup</h4>
+          <pre class="brush: php"><div class="container">
+  <div class="bg--white">
+    <p>Class: bg--white, #FFFFFF = White</p>
+    <p>Nulla et lacus vitae dui faucibus posuere vel in est. Curabitur ut ullamcorper tortor. Vivamus sagittis nibh vitae enim varius, ac porttitor metus rutrum. Pellentesque pharetra lorem iaculis risus blandit, et lacinia magna iaculis? Sed mattis quam quam. Nunc congue felis id augue varius, non facilisis arcu scelerisque. Proin molestie nibh sapien, in varius lacus malesuada a.</p>
+  </div>
+</div>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="component--item" id="button">
+    <h2 class="component--title">button</h2>
+    <div class="component--demo">
+      <div class="container">
+        <p>
+          <button>Default</button>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <button class="show-code">Show/Hide Code</button>
+      <div class="component--source element-invisible">
+        <div class="component--html">
+          <h4 class="component--source--title">Markup</h4>
+          <pre class="brush: php"><div class="container">
+  <p><button>Default</button></p>
+</div>
+</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/lib/media.match.min.js"></script>
+  <script src="js/lib/enquire.min.js"></script>
+  <script src="script/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shCore.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushJScript.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushPhp.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/SyntaxHighlighter/3.0.83/scripts/shBrushCss.js"></script>
+  <script src="https://use.fontawesome.com/9fb736d1ce.js"></script>
+  <script src="script/styleguide.js"></script>
+</body>
+
+</html>

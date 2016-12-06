@@ -1,0 +1,111 @@
+.box-feature {
+  @include clearfix;
+  clear: both;
+  text-align: center;
+
+  @include susy-media(desktopfixfeature) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @include susy-media(tablet) {
+    margin: rem(0 -20px);
+    padding: rem(0 20px);
+  }
+
+  &__item {
+    margin-bottom: rem(20px);
+
+    @include susy-media(mobileLandscape) {
+      display: inline-block;
+      margin-left: -2px;
+      margin-right: -2px;
+      vertical-align: top;
+      width: 50%;
+    }
+
+    @include susy-media(tablet) {
+      padding: rem(0 20px);
+      width: 33.333%;
+    }
+
+    @include susy-media(tablet-landscape) {
+      width: 25%;
+    }
+  }
+
+  &__image {
+    line-height: 0;
+    margin-bottom: rem(15px);
+
+    @include susy-media(tablet) {
+      margin-bottom: rem(20px);
+    }
+
+    img {
+      width: 100%;
+
+      @include susy-media(mobileLandscape) {
+        max-width: rem(210px);
+        width: 100%;
+      }
+    }
+  }
+
+  &__title {
+    @include susy-media(desktop) {
+      padding: rem(0 15px);
+    }
+
+    h2 {
+      @include jeles-regularregular;
+      color: $gray-66;
+      font-size: rem(14px);
+      line-height: rem(27px);
+      margin-bottom: 0;
+      margin-top: 0;
+      text-align: center;
+
+      @include susy-media(tablet) {
+        font-size: rem(16px);
+      }
+
+      a {
+        color: $gray-66;
+
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  &__link a {
+    @extend .icon-arrow-right;
+    @include dinpro-condmedium;
+    display: inline-block;
+    font-size: rem(17px);
+    letter-spacing: rem(.5px);
+    padding: rem(5px);
+    text-transform: uppercase;
+    transition: all 300ms ease 0s;
+    width: 100%;
+
+    @include susy-media(tablet) {
+      margin-top: rem(6px);
+      padding: rem(9px 15px 9px 10px);
+    }
+
+    &:hover {
+      margin-right: rem(7px);
+      opacity: .9;
+      transform: scale(1.02);
+    }
+
+    &:before {
+      color: $orange-1;
+      font-family: kong;
+      margin-right: rem(5px);
+    }
+  }
+}

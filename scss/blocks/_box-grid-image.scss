@@ -1,0 +1,364 @@
+// Box grid style.
+.box-grid-image {
+  @extend %clearfix;
+  list-style: none;
+  margin-left: 0;
+  padding-bottom: rem(30px);
+
+  @include susy-media(tablet-landscape) {
+    padding-bottom: rem(45px);
+  }
+
+  &.no-space {
+    padding: 0;
+  }
+
+  &__image {
+    height: 100%;
+    line-height: 0;
+    width: 100%;
+
+    img {
+      height: auto;
+      max-width: inherit;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+
+  .is-hover-short {
+    .box-grid-image {
+      &__content {
+        @include susy-media(desktop) {
+          margin: rem(25px) auto;
+        }
+      }
+    }
+  }
+
+  .is-hover-short,
+  .is-hover-height {
+    .box-grid-image {
+      &__content {
+        &:hover {
+          @include susy-media(tablet) {
+            @include transform(translateY(0));
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    @include transform(translateY(calc(100% - 15px)));
+    @include transition(.5s);
+    background: $white;
+    bottom: 0;
+    box-shadow: rem(0 0 13px 0) rgba($black, .2);
+    left: rem(10px);
+    margin: rem(10px) auto;
+    padding: rem(15px 20px 20px);
+    position: absolute;
+    right: rem(10px);
+    // We can use calc in Translate on IE.
+    -ms-transform: translateY(100%) translateY(-15px);
+
+    @include susy-media(mobileTabletOnly) {
+      @include transform(translateY(calc(100% - 30px)));
+      // We can use calc in Translate on IE.
+      -ms-transform: translateY(100%) translateY(-30px);
+    }
+
+    @include susy-media(tablet-landscape) {
+      left: rem(20px);
+      margin: rem(20px) auto;
+      right: rem(20px);
+    }
+
+    @include susy-media(desktop) {
+      margin: rem(30px) auto;
+    }
+
+    &.two-line {
+      @include transform(translateY(calc(100% - 35px)));
+      // We can use calc in Translate on IE.
+      -ms-transform: translateY(100%) translateY(-35px);
+
+      @include susy-media(mobileTabletOnly) {
+        @include transform(translateY(calc(100% - 60px)));
+        // We can use calc in Translate on IE.
+        -ms-transform: translateY(100%) translateY(-60px);
+      }
+    }
+
+    &.three-line {
+      @include transform(translateY(calc(100% - 55px)));
+      // We can use calc in Translate on IE.
+      -ms-transform: translateY(100%) translateY(-55px);
+
+      @include susy-media(mobileTabletOnly) {
+        @include transform(translateY(calc(100% - 90px)));
+        // We can use calc in Translate on IE.
+        -ms-transform: translateY(100%) translateY(-90px);
+      }
+    }
+
+    &-inner {
+      @include susy-media(tablet) {
+        overflow-y: auto;
+      }
+    }
+
+    .mCSB_container {
+      margin-right: 0;
+    }
+
+    .mCSB_scrollTools {
+      margin-right: rem(-7px);
+    }
+
+    .mCustomScrollBox {
+      padding: 0;
+    }
+
+    .mCustomScrollbar {
+      @include susy-media(mobileOnly) {
+        height: inherit !important;
+      }
+    }
+  }
+
+  &__body {
+    text-align: left;
+
+    p {
+      font-size: 1rem;
+      line-height: rem(26px);
+      margin-bottom: rem(4px);
+      padding: rem(10px 0);
+    }
+  }
+
+  &__title {
+    @include jeles-regularregular;
+    font-size: 1.1em;
+    line-height: 1.4;
+    margin: rem(0 0 18px 0);
+
+    a {
+      color: $gray-66;
+    }
+  }
+
+  .links-inline {
+    @include dinpro-condmedium;
+    margin: 0;
+  }
+
+  .grid-6x6,
+  .grid-6x3 {
+    margin-right: 0;
+    width: 100%;
+
+    @include susy-media(tablet) {
+      @include span(6 of $susy-desktop);
+    }
+  }
+
+  .grid-3x6,
+  .grid-3x3 {
+    margin-right: 0;
+    width: 100%;
+
+    @include susy-media(mobileLandscape) {
+      @include span(4 of $susy-tablet);
+    }
+
+    @include susy-media(tablet) {
+      @include span(3 of $susy-desktop);
+    }
+  }
+
+  // Modifier style 1.
+  &--1 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(3) {
+          @include susy-media(mobileOnly) {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          @include susy-media(tablet) {
+            @include last;
+          }
+        }
+      }
+    }
+  }
+
+  // Modifier style 2.
+  &--2 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(2),
+        &:nth-child(4) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 3.
+  &--3 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(3),
+        &:nth-child(5) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 4.
+  &--4 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(2),
+        &:nth-child(3) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 5.
+  &--5 {
+    .box-grid-image {
+      &__item {
+
+        &:nth-child(2) {
+          @include susy-media(mobileOnly) {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(4) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 6.
+  &--6,
+  &--11, {
+    .box-grid-image {
+      &__item {
+        &:nth-child(2) {
+          @include susy-media(mobileOnly) {
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(3) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 7.
+  &--7,
+  &--10 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(3) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 8.
+  &--8,
+  &--9 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(2) {
+          @include susy-media(mobileOnly) {
+            margin-right: 0;
+          }
+
+          @include susy-media(tablet) {
+            float: right;
+            margin-right: 0;
+          }
+        }
+
+        &:nth-child(3) {
+          float: none;
+        }
+      }
+    }
+  }
+
+  // Modifier style 12.
+  &--12 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(1) {
+          margin-right: 0;
+          width: 100%;
+
+          @include susy-media(tablet) {
+            @include span(3 of $susy-desktop);
+          }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 13.
+  &--13 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(3),
+        &:nth-child(4) {
+          @include last;
+        }
+      }
+    }
+  }
+
+  // Modifier style 14.
+  &--14 {
+    .box-grid-image {
+      &__item {
+        &:nth-child(2) {
+          @include susy-media(tablet) {
+            @include last;
+          }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

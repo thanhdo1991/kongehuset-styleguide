@@ -1,0 +1,49 @@
+<header class="header">
+    <div class="header__sticky">
+    <div class="container">
+      <div class="header__left">
+        <div class="menu-switch-language list-inline">
+          <ul class="list-inline">
+            <li><a href="#">DK</a></li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">FR</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header__center">
+        <div class="header__logo">
+          <!-- <a href="#" class="link link__left"><i class="icon-angle-down"></i>Aktuelt</a>
+          <a id="logo" href="index.html"><img src="{{ img_path }}logo.svg" width="114" height="43" alt="Kong"></a>
+          <a href="#" class="link link__right">Kongehuset<i class="icon-angle-down"></i></a> -->
+
+          <div id="header-navigation" class="header__navigation">
+            <div class="container">
+              {% include "navigation.twig"%}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__right">
+        <div id="header-search" class="header__search">
+          <div class="header__search__icon"><i class="icon-search"></i></div>
+          <form class="search-box">
+            <div class="form-type-textfield">
+              <label class="label-hidden">Search</label>
+              <input type="text" class="form-text" placeholder="Search..." title="Enter the terms you wish to search for.">
+            </div>
+            <div class="form-actions">
+              <input type="submit" class="form-submit js-top-search" value="Search">
+            </div>
+          </form>
+        </div>
+        <div class="header__menu  list-inline">
+          <ul class="">
+            <li><a href="#">Kalender</a></li>
+            <li><a href="#">Presse</a></li>
+            <li><a href="#">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

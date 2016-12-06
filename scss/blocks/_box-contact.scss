@@ -1,0 +1,144 @@
+// style page contact
+.box-contact {
+  float: left;
+  margin-bottom: 21px;
+  width: 100%;
+
+  @include susy-media(tablet-landscape) {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 33.32%;
+  }
+
+  @include susy-media(mobileOnly) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  @include susy-media(mobileSmallOnly) {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+
+  &.bottom-zoom {
+    margin-bottom: 41px;
+  }
+
+  &__image {
+    display: inline-block;
+    margin-bottom: 56px;
+
+    @include susy-media(tablet-landscape) {
+      float: right;
+      padding-left: 15px;
+      width: 66.64%;
+    }
+
+    @include susy-media(mobileTabletOnly) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include dinpro-condmedium;
+    color: $gray-99;
+    font-size: 1.6em;
+    letter-spacing: 0;
+    margin: 0 0 19px;
+    padding-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+
+    &.hidden-title {
+      display: none;
+    }
+  }
+
+  &__content {
+    @include gotham-book;
+    border-bottom: 1px solid $orange-1;
+    color: $gray-66;
+    font-size: 1em;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 0;
+
+    .__zoom {
+      padding-bottom: 34px;
+    }
+
+    &.minheight-content {
+      min-height: 199px;
+
+      @include susy-media(mobileTabletOnly) {
+        min-height: auto;
+      }
+    }
+
+    p {
+      color: $gray-66;
+      font-size: 1em;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  .bold,
+  &_subtitle {
+    @include gotham;
+  }
+
+  .tlf-bold.bold {
+    margin-top: 24px;
+  }
+
+  .Fax.bold {
+    margin-bottom: 10px;
+  }
+
+  .mail {
+    margin-top: 24px;
+    white-space: nowrap;
+  }
+
+  .box-contact__content.__zoom {
+    padding-bottom: 34px;
+  }
+}
+
+.box-contact:nth-child(3n+4) {
+  clear: both;
+
+  @include susy-media(mobileTabletOnly) {
+    clear: none;
+  }
+}
+
+@include susy-media(mobileTabletOnly) {
+  .box-contact__title.hidden-responsevi {
+    display: none;
+  }
+}
+
+.box-contact:last-child {
+  float: right;
+}
+
+.page-node-44782,
+.page-node-44831 {
+
+  .right-sidebar-content {
+    width: 100%;
+
+    .pane-node-title {
+      @extend .node-title-page-list;
+    }
+  }
+
+  .paragraphs-item-html-block {
+    margin-bottom: 0;
+  }
+}

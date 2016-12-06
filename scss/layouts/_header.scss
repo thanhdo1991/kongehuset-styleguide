@@ -1,0 +1,444 @@
+.header {
+  position: relative;
+  z-index: 101;
+  min-height: 99px;
+
+  @include susy-media(mobileOnly) {
+    min-height: 50px;
+  }
+
+  &__behind {
+    background-color: $white;
+    box-shadow: 0 0 rem(10px) 0 rgba(0, 0, 0, 0.06);
+    z-index: 2;
+    position: relative;
+    top: -200px;
+
+    .logo {
+      height: 60px;
+      left: 50%;
+      margin-left: rem(-25px);
+      padding: 0;
+      position: absolute;
+      width: 50px;
+
+      a {
+        background-size: 50px;
+        height: rem(50px);
+        margin: 0;
+        position: static;
+        width: rem(50px);
+      }
+    }
+
+    &__bottom {
+      background-color: $white;
+      border-bottom: 1px none $black;
+      box-shadow: 0 0 rem(10px) 0 rgba(0, 0, 0, 0.1);
+      margin-top: rem(-10px);
+
+    }
+
+    &__top {
+      box-shadow: 0 0 rem(10px) 0 rgba($black, 0.1);
+      padding-top: rem(9px);
+      position: relative;
+    }
+
+    ul li.link {
+      &__left,
+      &__right {
+        width: 50%;
+        height: rem(39px);
+        padding-top: rem(2px);
+      }
+
+      &__left {
+        padding-right: rem(73px);
+      }
+
+      &__right {
+        padding-left: rem(75px);
+      }
+    }
+
+    .mega-menu {
+      &.active {
+        top: rem(46px);
+      }
+    }
+  }
+
+  &__main {
+    position: relative;
+    z-index: 3;
+  }
+
+  &__logo {
+    margin-top: -2px;
+  }
+
+  &__left,
+  &__right {
+    padding-top: rem(14px);
+    position: relative;
+    z-index: 2;
+  }
+
+  &__left {
+    @include span(6 of $susy-desktop);
+  }
+
+  &__right {
+    @include span(6 of $susy-desktop last);
+  }
+
+  &__menu {
+    float: right;
+
+    li {
+      margin-right: rem(20px);
+      text-transform: uppercase;
+    }
+  }
+
+  &__search {
+    float: right;
+  }
+
+  &__sticky {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  &__hide {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: -200px;
+  }
+
+  .search-box {
+    display: none;
+  }
+}
+
+ul li.link {
+  &__left,
+  &__right {
+    float: left;
+    list-style:  none;
+    height: rem(52px);
+    margin: 0;
+    padding: 0;
+    width: 41.67%;
+  }
+}
+
+.pane-kon-pages-kongehuset-secondary-menu {
+  .pane-content {
+    float: left;
+    position: relative;
+  }
+
+  .submenu-item {
+    border-right: rem(1px) solid hsla(135, 4%, 81%, .31);
+    float: left;
+    max-width: rem(300px);
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+
+    > h3 {
+      color: #888;
+      float: none;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: rem(1px);
+      margin-bottom: 0;
+      margin-right: rem(20px);
+      margin-top: 0;
+      padding: rem(12px 20px 8px 10px);
+      position: relative;
+      text-transform: uppercase;
+      width: 100%;
+      z-index: 1;
+
+      &.angle-down {
+        @extend .icon-angle-down;
+
+        &:before {
+          @extend .icons-icomon;
+          cursor: pointer;
+          position: absolute;
+          right: 20px;
+          top: 18px;
+          z-index: 3;
+        }
+
+        &:after {
+          @include filter-gradient($white, $white , horizontal);
+          @include background(linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 45%,rgba(255,255,255,1) 100%));
+          position: absolute;
+          content: '';
+          right: 0;
+          bottom: 0;
+          top: rem(10px);
+          width: rem(50px);
+          z-index: 2;
+        }
+      }
+    }
+
+    .menu-block-wrapper {
+      background: white;
+      border-color: #cbd0cc hsla(135, 4%, 81%, .27) hsla(132, 5%, 81%, .27) hsla(132, 5%, 81%, .27);
+      border-style: none solid solid;
+      border-width: 1px;
+      display: none;
+      overflow: hidden;
+      padding-bottom: rem(20px);
+      position: absolute;
+      top: 50px;
+      transition: all .5s ease 0s;
+      width: 250px;
+      z-index: 99;
+      margin-left: -1px;
+
+      ul li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        padding: rem(5px 20px 5px 0);
+        @include gotham-book;
+        color: $gray-66;
+        font-size: 0.9rem;
+        display: block;
+        line-height: rem(20px);
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .menu-block-wrapper.active {
+      display: block;
+    }
+  }
+}
+
+.link-action {
+  display: none;
+  width: 100%;
+
+  @include susy-media(tablet) {
+    display: block;
+  }
+
+  a {
+    @include dinpro-condmedium;
+    color: $blue-a7;
+    display: inline-block;
+    float: right;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: rem(12px 25px 8px 15px);
+    position: relative !important;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    min-width: rem(185px);
+    text-align: left;
+
+    &:first-child {
+      border-right: 1px solid  hsla(132, 5%, 81%, .2);
+    }
+
+    &:last-child {
+      border-left: 1px solid hsla(132, 5%, 81%, .2);
+      text-align: right;
+      margin-right: rem(10px);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:before {
+      @extend .icons-icomon;
+      content: "\e901";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      line-height: 0;
+      transform: scalex(1.3);
+      margin-top: 0px;
+    }
+
+    &.go-back-referrer {
+      float: left;
+      height: auto;
+      padding-left: rem(55px);
+      width: rem(215px);
+      margin-left: rem(-45px);
+
+      &:before {
+        left: rem(28px);
+        right: inherit;
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: scaleX(-1.2);
+        -ms-transform: scaleX(-1.2);
+        -webkit-transform:scaleX(-1.2);
+      }
+    }
+  }
+}
+
+ul.language-switcher-locale-url,
+.header__menu {
+  padding: 0 19px;
+  margin-bottom: 0;
+  a {
+    font-size: 1.1rem;
+  }
+}
+
+ul.language-switcher-locale-url {
+  padding-left: 0;
+
+  li {
+    margin-right: rem(18px);
+
+     a {
+      &.active {
+        color: $gray-66;
+      }
+     }
+  }
+}
+
+.header__menu {
+  ul.menu {
+    margin-right: -15px;
+      li {
+      margin-right: rem(15px);
+
+      a {
+        color: $gray-66;
+      }
+
+      .icon-search {
+        font-size: 0;
+
+        &:before {
+          font-size: 1rem;
+        }
+      }
+
+      &.last {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+ul li.logo {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding-top: rem(12px);
+  position: relative;
+  width: 16.66%;
+
+  a {
+    //background-image: url("../images/logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: inline-block;
+    font-size: 0;
+    height: rem(99px);
+    left: 50%;
+    margin-left: rem(-50px);
+    margin-top: rem(-36px);
+    max-width: rem(99px);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 999;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+/* Fix menu header without item */
+
+ul.menu li {
+  &.logo {
+    &.first {
+      position: static;
+
+      + .link__right {
+        float: right;
+      }
+    }
+  }
+}
+
+.header__behind {
+  ul.menu li.logo.first {
+    position: absolute;
+  }
+}
+
+
+.link {
+  > a.active,
+  > a.active-trail {
+    color: $gray-66;
+  }
+}
+
+
+/* mobile pane-subholder */
+.pane-subholder,
+.submenholder {
+  @include susy-media(mobileOnly) {
+    // background: transparent;
+  }
+}
+
+/* Custom style for header in reponsive */
+
+.submenu-anchorlink,
+.pane-subholder {
+  @include susy-media(mobileOnly) {
+    @include element-invisible;
+    // display: none;
+    // background-color: $white;
+    // margin-bottom: rem(5px);
+
+    // .pane-kon-pages-kongehuset-secondary-menu {
+    //   @include element-invisible;
+    // }
+
+    // .anchor_links ul li {
+    //   display: block;
+
+    //   a {
+    //     float: none;
+    //     display: block;
+    //   }
+    // }
+  }
+}
